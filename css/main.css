@@ -19,7 +19,7 @@ body {
     flex-direction: column;
     border-style: double;
     border-width: 6px;
-    padding: 30px 15px 30px 15px;
+    padding: 20px 15px 30px 15px;
 }
 
 h3 {
@@ -30,9 +30,9 @@ h3 {
 p {
     padding-top: 10px;
     padding-bottom: 10px;
-    text-align: left;
+    text-align: justify;
     padding-left:5px;
-    line-height: 17px;
+    line-height: 25px;
 }
 
 #bet {
