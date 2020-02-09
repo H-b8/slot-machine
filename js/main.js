@@ -1,6 +1,6 @@
 /* * * * * * * * * * * * * CONSTANTS * * * * * * * * * * * * */
 
-const heel, cherries, devil, plug, dollar = '';
+const slots = [heel, cherries, devil, plug, dollar];
 
 /* * * * * * * * * * APP'S STATE VARIABLES * * * * * * * * * */
 
@@ -13,21 +13,20 @@ let spinResults = [];
 
 /* * * * * * * * * * * EVENT LISTENERS * * * * * * * * * * * */
 
-document.querySelector('button').addEventListener('click', initialize);
+document.querySelector('button').addEventListener('click', addCash);
 
 let section = document.querySelector('section')
 section.addEventListener('click', (evt) => {
     
-    if(tkns >= 1) {
+    if(tkns >= 5) {
         
         spin(evt);
     } 
     else {
         
-        // cash = prompt(insufficient funds, input amount);
+        // inner text of input turns red, displays "INSUFFICIENT FUNDS"
         tkns = tkns + (cash * 0.05);
         // update element on page
-        // waiting for user to click again
     }
 });
 
@@ -37,11 +36,18 @@ initialize();
 
 // GAME IS STARTED
 
-function initialize (){
+function initialize() {
+	tkns = 0;
+	// what's showing in the spinners is random parts of strip ?
+}
 
-	// cash = prompt for cash amount;
+// USER TYPES IN CASH AMOUNT, CLICKS "PLACE BET"
+
+function placeBet() {
+
+	// cash = input amount 
 	tkns = cash / 0.05;
-	tokens.innerText = tkns;
+	// tokens.innerText = tkns;
 }
 
 // SPIN IS CLICKED 
@@ -50,10 +56,15 @@ function spin(evt) {
 	
 	tkns -= 1;
 	tokens.innerText = tkns;
+	spinResults = [null, null, null];
 
-	spinResults = [null, null, null, null, null];
-	// randomizer to fill in spinResults
-	// display images
+	// slider animation maybe
+	// loop one div at a time
+	// randomizer shuffles image around
+	// centers in div
+	// get corresponding name 
+	// push to spinResults array
+
 	render(spinResults);
 }
 
@@ -61,21 +72,9 @@ function render() { // is being passed an array
 
 	// iterate to find or filter number of times each element occurs and return results like in array lab
 	
-	
-	if (slot === 'dollar') {
-		
-		matchCount = 0;
-		// loop to find number of matches and update count
-		tkns = tkns + 5 + (5 * match);
-
-		// remove element from array
-	}
-
-	else { // (slot !== 'dollar')
-		
-		matchCOunt = 0;
-		// loop to find number of matches and update count
-		// remove element from array
-		tkns = tkns + 1 + match;
-	}
+	// if any dollar tkns += 69
+	// if pair tkns += 50
+	// if perf row += 100
+	// perf row dollar signs += 500
+	// devil row -= 420
 }
