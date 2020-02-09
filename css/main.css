@@ -39,13 +39,20 @@ p {
     padding-top: 25px;
 }
 
-input, input:active, input:focus {
+input, input:active {
+    color: #DADDDD;
     height: 30px;
-    width: 350px;
+    width: 330px;
     border: solid;
+    border-color: black;
     border-width: 3px;
     outline: none;
     font-size: 20px;
+    padding-left: 10px;
+}
+
+input:focus {
+    color:black;
 }
 
 .cashin, .cashin:active, .cashin.focus  {
