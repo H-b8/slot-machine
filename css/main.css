@@ -1,9 +1,142 @@
-* {
+*, *:before, *:after {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
+/* * * * * * * * * * INSTRUCTIONS DIV * * * * * * * * * */
+
+#instructions {
+    width:500px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    border-style: double;
+    border-width: 6px;
+    padding: 30px 15px 30px 15px;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    padding-left:5px;
+    line-height: 17px;
+}
+
+#bet {
+    padding-top: 25px;
+}
+
+input, input:active, input:focus {
+    height: 30px;
+    width: 350px;
+    border: solid;
+    border-width: 3px;
+    outline: none;
+    font-size: 20px;
+}
+
+.cashin, .cashin:active, .cashin.focus  {
+    background: black;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    width: 130px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    align-self: center;
+    outline: none;
+
+}
+
+.cashin:hover {
+    background: transparent;
+    color: black;
+    padding: 7px 0px 7px 0px;
+    border: solid;
+    border-width: 3px;
+}
+
+/* * * * * * * * * * GAME DIV * * * * * * * * * */
+
+#game {
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* * * * * * * * * * SPINNER SECTION * * * * * * * * * */
+
+#spinner {
+    padding: 0px 15px 0px 15px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    width:500px;
+    height:300px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    border-style: double;
+    border-width: 6px;
+}
+
+.slot {
+    width:150px;
+    height: 250px;
+    border: solid;
+    border-width: 3px;
+}
+
+/* * * * * * * * * * SCORE SECTION * * * * * * * * * */
+
+#money {
+    padding: 0px 15px 0px 15px;
+    margin-right: 0px;
+    width:500px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    border-style: double;
+    border-width: 6px;
+}
+
+.cashout, .cashout:active, .cashout.focus  {
+    background: black;
+    color: white;
+    width: 130px;
+    padding: 10px 15px 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    align-self: center;
+    outline: none;
+}
+
+.cashout:hover {
+    background: transparent;
+    color: black;
+    padding: 7px 0px 7px 0px;
+    border: solid;
+    border-width: 3px;
+}
+
+/* * * * * * * * * * FOOTER * * * * * * * * * */
+
 footer {
+    margin-top: 10px;
     font-size: 10px;;
 }

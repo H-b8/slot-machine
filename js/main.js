@@ -79,4 +79,3 @@ function render() { // is being passed an array
 		tkns = tkns + 1 + match;
 	}
 }
-
