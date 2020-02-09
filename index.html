@@ -11,23 +11,39 @@
 </head>
 
 <body>
-    <header></header>
+    <header><img src="images/headertext.png"></header>
+    
+    <div id="instructions">
+        <!-- <button id="exit-instructions">X</button> -->
+        <h3>* * * * * * * * * * WINNING COMBINATIONS * * * * * * * * * *</h3>
+        <p>
+            -  TWO MATCHING SLOTS = 50 TOKENS<br>
+            -  THREE MATCHING SLOTS = 100 TOKENS<br>
+            -  EVERY '$' =  69 TOKENS<br>
+            -  THREE '$'s IN A ROW = BONUS 500 TOKENS
+        </p>
+        <h3>* * * * * * * * * * $0.05 = 1 TOKEN = 1 SPIN * * * * * * * * * *</h3>
+        <section id="bet">
+            <input></input>
+            <button class="cashin">PLACE BET</button>
+        </section>
+    </div>
 
-    <section class="spinner">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </section>
+    <div id="game">
+        <section id="spinner">
+            <div class="slot"></div>
+            <div class="slot"></div>
+            <div class="slot"></div>
+        </section>
+    
+        <section id="money">
+            <h2 class="score" id="label">TOKENS: </h2>
+            <h2 class="score" id="tokens">000000</h2>
+            <button class="cashout">CA$H OUT</button>
+        </section>
+    </div>
 
-    <section class="money">
-        <h2></h2>
-        <h2></h2>
-        <button id="cash-out">CASH OUT</button>
-    </section>
-
-    <footer>MADE BY H-B8</footer>
+    <footer>MADE BY C.M. LE</footer>
 </body>
 
 </html>
