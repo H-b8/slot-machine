@@ -1,21 +1,28 @@
 /* * * * * * * * * * * * * CONSTANTS * * * * * * * * * * * * */
 
-const slots = [heel, cherries, devil, plug, dollar];
-
+const slotValues = [
+	{ name: 'dollar', image: 'dollar.png' },
+	{ name: 'heel', image: 'heel.png' }, 
+	{ name: 'cherries', image: 'cherries.png' },
+	{ name: 'plug', image: 'plug.png' }, 
+	{ name: 'angel', image: 'angel.png' },
+	{ name: 'devil', image: 'devil.png' }
+  ];
 /* * * * * * * * * * APP'S STATE VARIABLES * * * * * * * * * */
 
 let cash, tkns;
-let spinResults = [];
 
 /* * * * * * * * * CASHED ELEMENT REFERENCES * * * * * * * * */
 
-
+// tokens
+// cash
+// slot div
 
 /* * * * * * * * * * * EVENT LISTENERS * * * * * * * * * * * */
 
 document.querySelector('button').addEventListener('click', addCash);
 
-let section = document.querySelector('section')
+let spinner = document.querySelector('.spinner')
 section.addEventListener('click', (evt) => {
     
     if(tkns >= 5) {
@@ -24,7 +31,8 @@ section.addEventListener('click', (evt) => {
     } 
     else {
         
-        // inner text of input turns red, displays "INSUFFICIENT FUNDS"
+		// inner text of input turns red, displays "INSUFFICIENT FUNDS"
+		// wait for user input
         tkns = tkns + (cash * 0.05);
         // update element on page
     }
@@ -37,16 +45,17 @@ initialize();
 // GAME IS STARTED
 
 function initialize() {
-	tkns = 0;
-	// what's showing in the spinners is random parts of strip ?
+	this.cash = 0;
+	this.tkns = 0;
+	// show x's in slots, need cached value
 }
 
 // USER TYPES IN CASH AMOUNT, CLICKS "PLACE BET"
 
-function placeBet() {
+function addCash(evt) {
 
 	// cash = input amount 
-	tkns = cash / 0.05;
+	this.tkns = cash / 0.05;
 	// tokens.innerText = tkns;
 }
 
@@ -54,27 +63,60 @@ function placeBet() {
 
 function spin(evt) {
 	
-	tkns -= 1;
-	tokens.innerText = tkns;
-	spinResults = [null, null, null];
+	tkns -= 5;
+	// tokens.innerText = tkns;
+	let spinResults = [null, null, null];
 
-	// slider animation maybe
 	// loop one div at a time
-	// randomizer shuffles image around
-	// centers in div
-	// get corresponding name 
-	// push to spinResults array
+	for (i = 0; i < spinResults.length; i++) {
+		// play slider animation
+		spinResults[i] = this.slotValues[Math.floor(Math.random()*this.slotValues.length)]; // puts a slotValue OBJECT into array
+		// display corresponding image into current div
+	}
 
-	render(spinResults);
+	matchTally(spinResults);
 }
 
-function render() { // is being passed an array 
+function matchTally(objArr) {
+	let slotCount = spinResults.reduce(function (acc, slot) {
+		acc[slot.name] = acc[slot.name] ? acc[slot.name] + 1 : 1;
+		return acc;
+	}, {});
+	console.log(slotCount) // spits out objArr with names and count only
+	updateTokens(slotCount); // pass that objArr to calculate tokens
+}
 
-	// iterate to find or filter number of times each element occurs and return results like in array lab
+function updateTokens(obj) {
+	for (let key in obj) { // key = names, value = count
+
+		if(obj[key] === 3){ 
+		console.log("perf row")
+		  if (key === 'dollar') {
+			tkns += 500;
+		  }
+		  else if (key !== 'dollar' && key !== 'devil') {
+			tkns += 100;
+		  }
+		  else {
+			console.log("....LOL")
+			tkns -= 666;
+		  }
+		}
 	
-	// if any dollar tkns += 69
-	// if pair tkns += 50
-	// if perf row += 100
-	// perf row dollar signs += 500
-	// devil row -= 420
+		if (obj[key] === 2) {
+		  if (key !== 'devil') {
+			console.log("2 matches")
+			tkns += 50
+		  }
+		  else {
+			console.log("2 devils")
+			tkns -= 100;
+		  }
+		}
+	
+		if (obj[key] === 1 && key === 'dollar') {
+		  console.log("1 doll hair")
+		  tkns += 20;
+		}
+	  }
 }
