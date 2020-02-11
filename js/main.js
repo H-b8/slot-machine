@@ -11,31 +11,27 @@ const slotValues = [
 /* * * * * * * * * * APP'S STATE VARIABLES * * * * * * * * * */
 
 let cash, tkns;
+let spinResults =[];
 
 /* * * * * * * * * CASHED ELEMENT REFERENCES * * * * * * * * */
 
-let bet = document.querySelector('#pb');
-let cashIn = document.querySelector('#cashin');
+let placeBet = document.querySelector('#pb'); // button
+let cashIn = document.querySelector('#cashin'); // input
+let cashOut = document.querySelector('#cashout'); // button
+let spinner = document.querySelector('#spinner');
 
 /* * * * * * * * * * * EVENT LISTENERS * * * * * * * * * * * */
 
-bet.addEventListener('click', payMe);
-
-// let spinner = document.querySelector('.spinner')
-// section.addEventListener('click', (evt) => {
-    
-//     if(tkns >= 5) {
-        
-//         spin(evt);
-//     } 
-//     else {
-        
-// 		// inner text of input turns red, displays "INSUFFICIENT FUNDS"
-// 		// wait for user input
-//         tkns = tkns + (cash * 0.05);
-//         // update element on page
-//     }
-// });
+placeBet.addEventListener('click', payMe);
+cashOut.addEventListener('click', initialize);
+spinner.addEventListener('click', function(evt){
+	if(tkns >= 5) {
+        spin(evt);
+    } 
+    else {
+		cashIn.value = 'INSUFFICIENT FUNDS';
+	}
+});
 
 /* * * * * * * * * * * * * FUNCTIONS * * * * * * * * * * * * */
 
@@ -44,34 +40,32 @@ initialize();
 function initialize() {
 	console.log('GAME STARTED')
 	tkns = 0;
+	tokens.innerText = '000000'
 	for (let i = 0; i < 3; i++){
 		console.log(`RANDOM IMAGE PLACED IN SLOT ${i}`)
 		document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random()*slotValues.length)].image}`;
 	}
 }
 
-// USER TYPES IN CASH AMOUNT, CLICKS "PLACE BET"
-
 function payMe(evt) {
 	tkns += Math.floor(cashIn.value / 0.05);
 	tokens.innerText = tkns;
+	cashIn.value = '0.00';
 }
-
-// SPIN IS CLICKED 
 
 function spin(evt) {
 	
 	tkns -= 5;
 	tokens.innerText = tkns;
-	let spinResults = [null, null, null];
+	spinResults = [null, null, null];
 
-	// loop one div at a time
 	for (i = 0; i < spinResults.length; i++) {
 		// play slider animation
-		spinResults[i] = slotValues[Math.floor(Math.random()*this.slotValues.length)]; // puts a slotValue OBJECT into array
+		spinResults[i] = slotValues[Math.floor(Math.random()*slotValues.length)]; // puts a slotValue OBJECT into array
 		document.getElementById(`${i}`).src = spinResults[i].image;
 	}
 
+	console.log(spinResults)
 	matchTally(spinResults);
 }
 
@@ -88,33 +82,38 @@ function updateTokens(obj) {
 	for (let key in obj) { // key = names, value = count
 
 		if(obj[key] === 3){ 
-		console.log("perf row")
+			console.log('3 IN A ROW')
 		  if (key === 'dollar') {
+			console.log('DOLL HAIR! ADD 500')
 			tkns += 500;
 		  }
 		  else if (key !== 'dollar' && key !== 'devil') {
+			console.log('ADD 100')
 			tkns += 100;
 		  }
 		  else {
-			console.log("....LOL")
+			console.log('DEVILS! MINUS 420')
 			tkns -= 420;
 		  }
 		}
 	
 		if (obj[key] === 2) {
 		  if (key !== 'devil') {
-			console.log("2 matches")
+			console.log('2 MATCHES, ADD 50')
 			tkns += 50
 		  }
 		  else {
-			console.log("2 devils")
+			console.log('2 DEVILS, MINUS 100')
 			tkns -= 100;
 		  }
 		}
 	
 		if (obj[key] === 1 && key === 'dollar') {
-		  console.log("1 doll hair")
-		  tkns += 20;
+			console.log('BONUS 20')
+			tkns += 20;
 		}
+
+		console.log(tkns)
+		tokens.innerText = tkns;
 	  }
 }
