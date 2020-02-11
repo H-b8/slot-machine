@@ -1,12 +1,12 @@
 /* * * * * * * * * * * * * CONSTANTS * * * * * * * * * * * * */
 
 const slotValues = [
-	{ name: 'dollar', image: 'dollar.png' },
-	{ name: 'heel', image: 'heel.png' }, 
-	{ name: 'cherries', image: 'cherries.png' },
-	{ name: 'plug', image: 'plug.png' }, 
-	{ name: 'angel', image: 'angel.png' },
-	{ name: 'devil', image: 'devil.png' }
+	{ name: 'dollar', image: 'images/dollar.png' },
+	{ name: 'heel', image: 'images/heel.png' }, 
+	{ name: 'cherries', image: 'images/cherries.png' },
+	{ name: 'kit', image: 'images/kit.png' }, 
+	{ name: 'angel', image: 'images/angel.png' },
+	{ name: 'devil', image: 'images/devil.png' }
   ];
 /* * * * * * * * * * APP'S STATE VARIABLES * * * * * * * * * */
 
@@ -14,49 +14,47 @@ let cash, tkns;
 
 /* * * * * * * * * CASHED ELEMENT REFERENCES * * * * * * * * */
 
-// tokens
-// cash
-// slot div
+let bet = document.querySelector('#pb');
+let cashIn = document.querySelector('#cashin');
 
 /* * * * * * * * * * * EVENT LISTENERS * * * * * * * * * * * */
 
-document.querySelector('button').addEventListener('click', addCash);
+bet.addEventListener('click', payMe);
 
-let spinner = document.querySelector('.spinner')
-section.addEventListener('click', (evt) => {
+// let spinner = document.querySelector('.spinner')
+// section.addEventListener('click', (evt) => {
     
-    if(tkns >= 5) {
+//     if(tkns >= 5) {
         
-        spin(evt);
-    } 
-    else {
+//         spin(evt);
+//     } 
+//     else {
         
-		// inner text of input turns red, displays "INSUFFICIENT FUNDS"
-		// wait for user input
-        tkns = tkns + (cash * 0.05);
-        // update element on page
-    }
-});
+// 		// inner text of input turns red, displays "INSUFFICIENT FUNDS"
+// 		// wait for user input
+//         tkns = tkns + (cash * 0.05);
+//         // update element on page
+//     }
+// });
 
 /* * * * * * * * * * * * * FUNCTIONS * * * * * * * * * * * * */
 
 initialize();
 
-// GAME IS STARTED
-
 function initialize() {
-	this.cash = 0;
-	this.tkns = 0;
-	// show x's in slots, need cached value
+	console.log('GAME STARTED')
+	tkns = 0;
+	for (let i = 0; i < 3; i++){
+		console.log(`RANDOM IMAGE PLACED IN SLOT ${i}`)
+		document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random()*slotValues.length)].image}`;
+	}
 }
 
 // USER TYPES IN CASH AMOUNT, CLICKS "PLACE BET"
 
-function addCash(evt) {
-
-	// cash = input amount 
-	this.tkns = cash / 0.05;
-	// tokens.innerText = tkns;
+function payMe(evt) {
+	tkns += Math.floor(cashIn.value / 0.05);
+	tokens.innerText = tkns;
 }
 
 // SPIN IS CLICKED 
@@ -64,14 +62,14 @@ function addCash(evt) {
 function spin(evt) {
 	
 	tkns -= 5;
-	// tokens.innerText = tkns;
+	tokens.innerText = tkns;
 	let spinResults = [null, null, null];
 
 	// loop one div at a time
 	for (i = 0; i < spinResults.length; i++) {
 		// play slider animation
-		spinResults[i] = this.slotValues[Math.floor(Math.random()*this.slotValues.length)]; // puts a slotValue OBJECT into array
-		// display corresponding image into current div
+		spinResults[i] = slotValues[Math.floor(Math.random()*this.slotValues.length)]; // puts a slotValue OBJECT into array
+		document.getElementById(`${i}`).src = spinResults[i].image;
 	}
 
 	matchTally(spinResults);
@@ -99,7 +97,7 @@ function updateTokens(obj) {
 		  }
 		  else {
 			console.log("....LOL")
-			tkns -= 666;
+			tkns -= 420;
 		  }
 		}
 	
