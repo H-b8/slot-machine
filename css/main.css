@@ -129,7 +129,7 @@ input:focus {
     border-width: 6px;
 }
 
-.cashout, .cashout:active, .cashout.focus  {
+#cashout, #cashout:active, #cashout.focus  {
     background: black;
     color: white;
     width: 130px;
@@ -142,7 +142,7 @@ input:focus {
     border: none;
 }
 
-.cashout:hover {
+#cashout:hover {
     background: transparent;
     color: black;
     padding: 7px 0px 7px 0px;
