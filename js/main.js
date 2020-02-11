@@ -44,6 +44,7 @@ function initialize() {
 	for (let i = 0; i < 3; i++){
 		console.log(`RANDOM IMAGE PLACED IN SLOT ${i}`)
 		document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random()*slotValues.length)].image}`;
+		document.getElementById(`${i}`).style.width = '150px';
 	}
 }
 
