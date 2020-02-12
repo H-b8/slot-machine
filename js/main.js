@@ -56,28 +56,35 @@ function initialize() {
 	console.log(`${tkns} initial`) ////////////////////////
 
 	for (let i = 0; i < 3; i++){
-		setSlot(i);
-		// console.log(`RANDOM IMAGE PLACED IN SLOT ${i}`)
-		// document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random()*slotValues.length)].image}`;
-		// document.getElementById(`${i}`).style.width = '150px';
+		console.log(`RANDOM IMAGE PLACED IN SLOT ${i}`)
+		document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random()*slotValues.length)].image}`;
+		document.getElementById(`${i}`).style.width = '150px';
 	}
 }
 
-function setSlot(i) {
-	document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random()*slotValues.length)].image}`;
-	document.getElementById(`${i}`).style.width = '150px';
-}
+// function setSlot(i) {
+// 	document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random()*slotValues.length)].image}`;
+// 	document.getElementById(`${i}`).style.width = '150px';
+// }
 
 function payMe(evt) {
 
-	tkns += Math.floor(cashIn.value / 0.05);
-	tokens.innerText = leadingZeros(tkns, 6);
+	if (!isNaN(cashIn.value)){
+		
+		tkns += Math.floor(cashIn.value / 0.05);
+		tokens.innerText = leadingZeros(tkns, 6);
+		
+		console.log(`+ ${cashIn.value/0.05} (VIA CASH) = ${tkns} TOKENS`)
+	
+		cashIn.value = '0.00';
+		cashIn.style = null;
+		placeBet.style = null;
+	}
+	else {
+		cashIn.style.color = 'red';
+		cashIn.value = 'ENTER A VALID CASH AMOUNT';
+	}
 
-	console.log(`+ ${cashIn.value/0.05} (VIA CASH) = ${tkns} TOKENS`)
-
-	cashIn.value = '0.00';
-	cashIn.style = null;
-	placeBet.style = null;
 }
 
 function spin(evt) {
@@ -89,10 +96,8 @@ function spin(evt) {
 
 	for (i = 0; i < 3; i++) {
 
-		setSlot(i);
-
-		// spinResults[i] = slotValues[Math.floor(Math.random()*slotValues.length)]; // puts a slotValue OBJECT into array
-		// document.getElementById(`${i}`).src = spinResults[i].image;
+		spinResults[i] = slotValues[Math.floor(Math.random()*slotValues.length)]; // puts a slotValue OBJECT into array
+		document.getElementById(`${i}`).src = spinResults[i].image;
 	}
 	
 	matchTally(spinResults);
