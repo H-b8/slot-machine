@@ -14,15 +14,19 @@
     <header><img src="images/headertext.png"></header>
     
     <div id="instructions">
-        <!-- <button id="exit-instructions">X</button> -->
         <h3>* * * * * * * * * * WINNING COMBINATIONS * * * * * * * * * *</h3>
         <p>
-            2 MATCHES = 50 TOKENS &nbsp; ———–– <span class="f-right">3 MATCHES = 100 TOKENS</span><br>
-            1 '$' = 20 TOKENS &nbsp; ———————————– <span class="f-right">3 '$'s = 500 TOKENS</span><br>
-            2 DEVILS = -100 TOKENS &nbsp; —————– <span class="f-right">3 DEVILS = -420 TOKENS</span>
+            2 MATCHES = 10 TOKENS &nbsp; ———–– &nbsp;<span class="f-right">3 MATCHES = 50 TOKENS</span><br>
+            1 '$' = 20 TOKENS &nbsp; ——————————— &nbsp;<span class="f-right">3 '$'s = 100 TOKENS</span><br>
         </p>
-        <h3>* * * * * * * $0.05 = 1 TOKEN; 5 TOKENS/SPIN * * * * * * *</h3>
+        <h3>* * * * * * * * * * * LOSER COMBINATIONS * * * * * * * * * * *</h3>
+        <p>
+            2 DEVILS = -100 TOKENS &nbsp; ————— &nbsp;<span class="f-right">3 DEVILS = -420 TOKENS</span><br>
+            2 CIRCLES = -20% TOKENS &nbsp; ——— &nbsp;<span class="f-right">2 HEARTS = -40% TOKENS</span><br>
+            2 KITS = -50% TOKENS &nbsp; —————— &nbsp;<span class="f-right">3 KITS = -100% TOKENS</span>
+        </p>
         <section id="bet">
+            <h3>* * * * * * * $0.05 = 1 TOKEN; 5 TOKENS/SPIN * * * * * * *</h3>
             <input id="cashin" value="0.00">
             <button id="pb">PLACE BET</button>
         </section>
@@ -37,6 +41,9 @@
     
         <section id="money">
             <h2 class="score" id="label">TOKENS:</h2>
+            <!-- <h2 class="score" id="symbol"></h2>
+            <h2 class="score" id="win"></h2>
+            <h2 class="score">=</h2> -->
             <h2 class="score" id="tokens"></h2>
             <button id="cashout">CA$H OUT</button>
         </section>
