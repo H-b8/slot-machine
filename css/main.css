@@ -24,7 +24,7 @@ body {
 
 h3 {
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 p {
@@ -85,7 +85,14 @@ input:focus {
 
 .f-right {
     float: right;
+    padding: 0px;
 }
+
+.f-left {
+    float: left;
+    padding: 0px;
+}
+
 /* * * * * * * * * * GAME DIV * * * * * * * * * */
 
 #game {
