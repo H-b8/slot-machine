@@ -6,8 +6,8 @@ A casino favorite with a minimalist design and intersecting themes of blackwork 
 
 - All slot images were illustrated by the game's maker (Me)
 - To minimize clutter of an extra button or display area, the spin function is activated when a player clicks anywhere within the spinner section, and the amount of tokens won or lost during the current spin are rendered by highlighting the corresponding text in yellow
-- Like any other slot machine game, certain combinations of images result in wins/losses of varrying sizes
-- The player can continue to play for as long as they like so long as they keep inserting cash
+- Like any other slot machine game, certain combinations of images result in wins/losses of varrying amounts
+- The player can continue to play for as long as they like by inserting more money
 
 ### ICE BOX
 
