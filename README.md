@@ -1,4 +1,4 @@
-<img src="images/header.png">
+<img src="images/headertext.png">
 
 A casino favorite with a minimalist design and intersecting themes of blackwork flash tattoos and online sex work subculture
 
