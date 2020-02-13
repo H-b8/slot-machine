@@ -10,11 +10,12 @@ body {
     text-align: center;
 }
 
+
 /* * * * * * * * * * INSTRUCTIONS DIV * * * * * * * * * */
+
 
 #instructions {
     width:500px;
-    /* height: 348px; */
     display: flex;
     flex-direction: column;
     border-style: double;
@@ -28,8 +29,6 @@ h3 {
 }
 
 p {
-    /* padding-top: 10px; */
-    /* padding-bottom: 10px; */
     text-align: justify;
     padding-left:5px;
     padding-right:5px;
@@ -38,7 +37,6 @@ p {
 }
 
 #bet {
-    /* padding-top: 25px; */
     padding-bottom: 0px;
 }
 
@@ -71,8 +69,6 @@ input:focus {
     outline: none;
     border: none;
     vertical-align: bottom;
-
-
 }
 
 #pb:hover {
@@ -93,7 +89,9 @@ input:focus {
     padding: 0px;
 }
 
+
 /* * * * * * * * * * GAME DIV * * * * * * * * * */
+
 
 #game {
     margin-top:10px;
@@ -101,7 +99,9 @@ input:focus {
     flex-direction: column;
 }
 
+
 /* * * * * * * * * * SPINNER SECTION * * * * * * * * * */
+
 
 #spinner {
     padding: 0px 15px 0px 15px;
@@ -124,7 +124,9 @@ input:focus {
     border-width: 3px;
 }
 
+
 /* * * * * * * * * * SCORE SECTION * * * * * * * * * */
+
 
 #money {
     padding: 0px 15px 0px 15px;
@@ -158,10 +160,3 @@ input:focus {
     border: solid;
     border-width: 3px;
 }
-
-/* * * * * * * * * * FOOTER * * * * * * * * * */
-
-/* footer {
-    margin-top: 10px;
-    font-size: 10px;;
-} */
