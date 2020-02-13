@@ -112,7 +112,6 @@ function setSlotImage(objArr) {
 function matchTally(objArr) {
 
 	let slotCount = spinResults.reduce(function (acc, slot) {
-
 		acc[slot.name] = acc[slot.name] ? acc[slot.name] + 1 : 1;
 		return acc;
 	}, {});
