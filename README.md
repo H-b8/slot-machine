@@ -14,6 +14,6 @@ Like any other casino slot machine, the player may continue for as long as they 
 
 ### ICE BOX ITEMS
 
-- Responsive design for mobile and tablet
+- Responsive design for different browser window sizes, mobile, and tablet (As of now, the game is best viewed in a fullscreen browser)
 - Add payment processor to create real slot machine
 - Instead of resetting game, 'cash out' button will lead to a page where players can redeem their tokens for prizes
