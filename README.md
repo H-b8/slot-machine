@@ -1,16 +1,16 @@
 <img src="images/headertext.png">
 
-A casino favorite presented with a minimalist design and theme drawn from combining parts of online sex work subculture with flash tattoo styling
-
-## FEATURES AND HOW-TO'S
-
-All slot images were illustrated by the game's maker (Me). To minimize clutter of an extra button or display area, the spin function is activated when a player clicks anywhere within the spinner section, the token total is updated, and the amount won or lost during the current spin are then rendered by highlighting the corresponding text in a style reminiscent to token tip alerts recieved during live cam streams.
-
-Like any other slot machine, certain combinations of images result in wins and losses of varrying amounts. But in the spirit of the theme, combinations of site logos will take a percentage of the player's earnings and certain depictions will "f*ck over" the player. And like any casion game, the player may continue for as long as they like by coughing up sufficient funds.
+A casino favorite presented in a black and white minimalist design with primary color accents, with a theme drawn from combining parts of online sex work subculture and flash tattoo style.
 
 <img src="images/spinnerdemo.gif">
 
-[CLICK HERE TO PLAY!](https://h-b8.github.io/slot-machine-game/)
+## FEATURES AND HOW-TO'S
+
+All slot images were illustrated by the game's maker (Me!). To minimize clutter, the spin function is activated when a player clicks anywhere within the spinner section, and along with the total score update, the amount accumulated or lost during the current spin are then rendered by playing sound and highlighting the corresponding text in a style reminiscent to token tip alerts recieved during live cam streams.
+
+Like any other casino slot machine, the player may continue for as long as they like by coughing up sufficient funds, and certain combinations of images result in wins and losses of varrying amounts. But in the spirit of the game's theme, certain combinations will perform relevant actions, such as site logos taking a cut of the player's earnings the same way they do to their models in real life. 
+
+[FOR A GOOD TIME, CLICK TO PLAY!](https://h-b8.github.io/slot-machine-game/)
 
 ### ICE BOX
 
