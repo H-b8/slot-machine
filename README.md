@@ -11,6 +11,8 @@ A casino favorite with a minimalist design and intersecting themes of blackwork 
 
 <img src="images/spinnerdemo.gif">
 
+[CLICK HERE TO PLAY!](https://h-b8.github.io/slot-machine-game/)
+
 ### ICE BOX
 
 - Responsive design for mobile and tablet
