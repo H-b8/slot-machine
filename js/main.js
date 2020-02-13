@@ -12,7 +12,7 @@ const slotValues = [
 	{ name: 'mv', image: 'images/mv.png' }
 ];
 
-const highlightTargets = [a, b, c, d, e, f, g, h, j, k];
+const highlightIds = [a, b, c, d, e, f, g, h, j, k];
 
 
 /* * * * * * * * * * APP'S STATE VARIABLES * * * * * * * * * */
@@ -25,10 +25,12 @@ let spinResults =[];
 /* * * * * * * * * CASHED ELEMENT REFERENCES * * * * * * * * */
 
 
-let placeBet = document.querySelector('#pb');
+let placeBet = document.querySelector('#placebet');
 let cashIn = document.querySelector('#cashin');
 let cashOut = document.querySelector('#cashout');
 let spinner = document.querySelector('#spinner');
+let spinSound = document.querySelector('#spinsound');
+let winSound = document.querySelector('#winsound');
 
 
 /* * * * * * * * * * * EVENT LISTENERS * * * * * * * * * * * */
@@ -60,6 +62,7 @@ function initialize() {
 	tkns = 0;
 	tokens.innerText = '000000';
 	console.log(`TOKENS = ${tkns}`)
+	removeHighlight();
 	for (let i = 0; i < 3; i++){
 		document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random()*slotValues.length)].image}`;
 		document.getElementById(`${i}`).style.width = '150px';
@@ -83,11 +86,12 @@ function payMe(evt) {
 
 function spin(evt) {
 
+	spinSound.play();
 	removeHighlight();
 	tkns -= 5;
 	tokens.innerText = leadingZeros(tkns, 6);
 	console.log(`- 5 (VIA SPIN) = ${tkns} TOKENS`);
-	for (i = 0; i < 3; i++) {
+	for (let i = 0; i < 3; i++) {
 		spinResults[i] = slotValues[Math.floor(Math.random()*slotValues.length)];
 	}
 	setSlotImage(spinResults);
@@ -124,6 +128,7 @@ function updateTokens(obj) {
 	for (let key in obj) {
 		if(obj[key] === 3){ 
 			if (key === 'dollar') {
+				winSound.play();
 				d.style.background = 'yellow';
 				d.style.color = 'blue';
 				tkns += 500;
@@ -132,7 +137,7 @@ function updateTokens(obj) {
 			else if (key === 'devil') {
 				f.style.background = 'yellow';
 				f.style.color = 'blue';
-				tkns -= 420;
+				tkns -= 666;
 				console.log(`- 666 (DEVIL ROW) = ${tkns}`);
 			}
 			else if (key === 'of') {
@@ -154,6 +159,7 @@ function updateTokens(obj) {
 				console.log(`YOU'RE F*CKED = ${tkns}`);
 			}
 		 	else {
+				winSound.play();
 				b.style.background = 'yellow';
 				b.style.color = 'blue';
 				tkns += 100;
@@ -186,6 +192,7 @@ function updateTokens(obj) {
 				console.log(`- 50% (DOUBLE T.K.) = ${tkns}`);
 			}
 			else {
+				winSound.play();
 				a.style.background = 'yellow';
 				a.style.color = 'blue';
 				tkns += 50
@@ -193,34 +200,27 @@ function updateTokens(obj) {
 			}
 		}
 		if (obj[key] === 1 && key === 'dollar') {
+			winSound.play();
 			c.style.background = 'yellow';
 			c.style.color = 'blue';
 			tkns += 20;
 			console.log(`+ 20 ($ SIGN) = ${tkns}`);
 		}
-
-		if (tkns > 0) {
-			tokens.innerText = leadingZeros(tkns, 6);
-		}
-		else {
-			tkns = 0;
-			tokens.innerText = '000000'
-		}
+	}
+	if (tkns > 0) {
+		tokens.innerText = leadingZeros(tkns, 6);
+	}
+	else {
+		tkns = 0;
+		tokens.innerText = '000000'
 	}
 }
 
 function removeHighlight() {
 
-	a.style = null;
-	b.style = null;
-	c.style = null;
-	d.style = null;
-	e.style = null;
-	f.style = null;
-	g.style = null;
-	h.style = null;
-	k.style = null;
-	j.style = null;
+	for (i = 0; i < highlightIds.length; i++) {
+		highlightIds[i].style = null;
+	}
 }
 
 function leadingZeros(n, width, z) {
@@ -228,4 +228,4 @@ function leadingZeros(n, width, z) {
 	z = z || '0';
 	n = n + '';
 	return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-  }
+}
