@@ -3,9 +3,9 @@
 
 const slotValues = [
 	{ name: 'dollar', image: 'images/dollar.png' },
-	{ name: 'pleaser', image: 'images/pleaser.png' }, 
+	{ name: 'pleaser', image: 'images/pleaser.png' },
 	{ name: 'cherries', image: 'images/cherries.png' },
-	{ name: 'trainingkit', image: 'images/trainingkit.png' }, 
+	{ name: 'trainingkit', image: 'images/trainingkit.png' },
 	{ name: 'angel', image: 'images/angel.png' },
 	{ name: 'devil', image: 'images/devil.png' },
 	{ name: 'of', image: 'images/of.png' },
@@ -19,7 +19,7 @@ const highlightIds = [a, b, c, d, e, f, g, h, j, k];
 
 
 let tkns;
-let spinResults =[];
+let spinResults = [];
 
 
 /* * * * * * * * * CASHED ELEMENT REFERENCES * * * * * * * * */
@@ -39,12 +39,11 @@ let winSound = document.querySelector('#winsound');
 placeBet.addEventListener('click', payMe);
 cashOut.addEventListener('click', initialize);
 
-spinner.addEventListener('click', function(evt){
+spinner.addEventListener('click', function (evt) {
 
-	if(tkns >= 5) {
-        spin(evt);
-    } 
-    else {
+	if (tkns >= 5) {
+		spin(evt);
+	} else {
 		cashIn.style.color = 'red';
 		cashIn.style.borderColor = 'black';
 		cashIn.value = "IF YOU'RE STROKIN', TIP A TOKEN";
@@ -58,27 +57,26 @@ spinner.addEventListener('click', function(evt){
 initialize();
 
 function initialize() {
-	
+
 	tkns = 0;
 	tokens.innerText = '000000';
 	console.log(`TOKENS = ${tkns}`)
 	removeHighlight();
-	for (let i = 0; i < 3; i++){
-		document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random()*slotValues.length)].image}`;
+	for (let i = 0; i < 3; i++) {
+		document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random() * slotValues.length)].image}`;
 		document.getElementById(`${i}`).style.width = '150px';
 	}
 }
 
 function payMe(evt) {
 
-	if (!isNaN(cashIn.value)){	
+	if (!isNaN(cashIn.value)) {
 		tkns += Math.floor(cashIn.value / 0.05);
 		tokens.innerText = leadingZeros(tkns, 6);
-		console.log(`+ ${cashIn.value/0.05} (VIA CASH) = ${tkns} TOKENS`);
+		console.log(`+ ${cashIn.value / 0.05} (VIA CASH) = ${tkns} TOKENS`);
 		cashIn.value = '0.00';
 		cashIn.style = null;
-	}
-	else {
+	} else {
 		cashIn.style.color = 'red';
 		cashIn.value = 'ENTER A VALID CASH AMOUNT';
 	}
@@ -92,30 +90,28 @@ function spin(evt) {
 	tokens.innerText = leadingZeros(tkns, 6);
 	console.log(`- 5 (VIA SPIN) = ${tkns} TOKENS`);
 	for (let i = 0; i < 3; i++) {
-		spinResults[i] = slotValues[Math.floor(Math.random()*slotValues.length)];
+		spinResults[i] = slotValues[Math.floor(Math.random() * slotValues.length)];
 	}
 	setSlotImage(spinResults);
 }
 
 function setSlotImage(objArr) {
 
-	setTimeout (function() {
+	setTimeout(function () {
 		document.getElementById('0').src = objArr[0].image;
 	}, 300);
-	setTimeout (function() {
+	setTimeout(function () {
 		document.getElementById('1').src = objArr[1].image;
 	}, 600);
-	setTimeout (function() {
+	setTimeout(function () {
 		document.getElementById('2').src = objArr[2].image;
 		matchTally(spinResults);
 	}, 900);
 }
 
-
 function matchTally(objArr) {
 
 	let slotCount = spinResults.reduce(function (acc, slot) {
-
 		acc[slot.name] = acc[slot.name] ? acc[slot.name] + 1 : 1;
 		return acc;
 	}, {});
@@ -126,45 +122,40 @@ function matchTally(objArr) {
 function updateTokens(obj) {
 
 	for (let key in obj) {
-		if(obj[key] === 3){ 
+		if (obj[key] === 3) {
 			if (key === 'dollar') {
 				winSound.play();
 				d.style.background = 'yellow';
 				d.style.color = 'blue';
 				tkns += 500;
 				console.log(`+ 500 ($$$) = ${tkns}`);
-		  	}
-			else if (key === 'devil') {
+			} else if (key === 'devil') {
 				f.style.background = 'yellow';
 				f.style.color = 'blue';
 				tkns -= 666;
 				console.log(`- 666 (DEVIL ROW) = ${tkns}`);
-			}
-			else if (key === 'of') {
+			} else if (key === 'of') {
 				g.style.background = 'yellow';
 				g.style.color = 'blue';
 				tkns -= Math.floor(tkns * .20);
 				console.log(`- 20% (ONLYFANS PAYCUT) = ${tkns}`);
-			}
-			else if (key === 'mv') {
+			} else if (key === 'mv') {
 				h.style.background = 'yellow';
 				h.style.color = 'blue';
 				tkns -= Math.floor(tkns * .40);
 				console.log(`- 40% (MANYVIDS PAY CUT) = ${tkns}`);
-			}
-			else if (key === 'trainingkit') {
+			} else if (key === 'trainingkit') {
 				j.style.background = 'yellow';
 				j.style.color = 'blue';
 				tkns = 0;
 				console.log(`YOU'RE F*CKED = ${tkns}`);
-			}
-		 	else {
+			} else {
 				winSound.play();
 				b.style.background = 'yellow';
 				b.style.color = 'blue';
 				tkns += 100;
 				console.log(`+ 100 (PERF ROW) = ${tkns}`);
-		  	}
+			}
 		}
 		if (obj[key] === 2) {
 			if (key === 'devil') {
@@ -172,26 +163,22 @@ function updateTokens(obj) {
 				e.style.color = 'blue';
 				tkns -= 100;
 				console.log(`- 100 (DOUBLE DEVILS) = ${tkns}`);
-			}
-			else if (key === 'of') {
+			} else if (key === 'of') {
 				g.style.background = 'yellow';
 				g.style.color = 'blue';
 				tkns -= Math.floor(tkns * .20);
 				console.log(`- 20% (ONLYFANS PAY CUT) = ${tkns}`);
-			}
-			else if (key === 'mv') {
+			} else if (key === 'mv') {
 				h.style.background = 'yellow';
 				h.style.color = 'blue';
 				tkns -= Math.floor(tkns * .40);
 				console.log(`- 40% (MANYVIDS PAY CUT) = ${tkns}`);
-			}
-			else if (key === 'trainingkit') {
+			} else if (key === 'trainingkit') {
 				k.style.background = 'yellow';
 				k.style.color = 'blue';
 				tkns -= Math.floor(tkns * .50);
 				console.log(`- 50% (DOUBLE T.K.) = ${tkns}`);
-			}
-			else {
+			} else {
 				winSound.play();
 				a.style.background = 'yellow';
 				a.style.color = 'blue';
@@ -209,8 +196,7 @@ function updateTokens(obj) {
 	}
 	if (tkns > 0) {
 		tokens.innerText = leadingZeros(tkns, 6);
-	}
-	else {
+	} else {
 		tkns = 0;
 		tokens.innerText = '000000'
 	}

@@ -10,9 +10,7 @@ body {
     text-align: center;
 }
 
-
 /* * * * * * * * * * INSTRUCTIONS DIV * * * * * * * * * */
-
 
 #instructions {
     width:500px;
@@ -89,9 +87,7 @@ input:focus {
     padding: 0px;
 }
 
-
 /* * * * * * * * * * GAME DIV * * * * * * * * * */
-
 
 #game {
     margin-top:10px;
@@ -99,9 +95,7 @@ input:focus {
     flex-direction: column;
 }
 
-
 /* * * * * * * * * * SPINNER SECTION * * * * * * * * * */
-
 
 #spinner {
     padding: 0px 15px 0px 15px;
@@ -124,9 +118,7 @@ input:focus {
     border-width: 3px;
 }
 
-
 /* * * * * * * * * * SCORE SECTION * * * * * * * * * */
-
 
 #money {
     padding: 0px 15px 0px 15px;
