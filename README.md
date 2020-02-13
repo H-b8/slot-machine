@@ -1,4 +1,4 @@
-# SL*T MACHINE  
+<img src="images/header.gif">
 
 A casino favorite with a minimalist design and intersecting themes of blackwork flash tattoos and online sex work subculture
 
