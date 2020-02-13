@@ -9,7 +9,7 @@ A casino favorite with a minimalist design and intersecting themes of blackwork 
 - Like any other slot machine game, certain combinations of images result in wins/losses of varrying amounts
 - The player can continue to play for as long as they like by inserting more money
 
-<img src="images/demo.gif" width="700">
+<img src="images/demo.gif" width="500">
 
 ### ICE BOX
 
