@@ -56,7 +56,7 @@ input:focus {
     color:black;
 }
 
-#pb, #pb:active, #pb.focus  {
+#placebet, #placebet:active, #placebet.focus  {
     background: black;
     color: white;
     padding: 11px 0px 11px 0px;
@@ -71,7 +71,7 @@ input:focus {
     vertical-align: bottom;
 }
 
-#pb:hover {
+#placebet:hover {
     background: transparent;
     color: black;
     padding: 8px 0px 8px 0px;
@@ -159,4 +159,11 @@ input:focus {
     padding: 7px 0px 7px 0px;
     border: solid;
     border-width: 3px;
+}
+
+/* * * * * * * * * * SCORE SECTION * * * * * * * * * */
+
+footer {
+    text-align: center;
+    margin-top: 10px;
 }
