@@ -1,6 +1,6 @@
 <img src="images/headertext.png">
 
-A casino favorite presented in a black and white minimalist design with primary color accents, with a theme drawn from combining parts of online sex work subculture and flash tattoo style.
+A casino favorite presented in a black and white minimalist design with primary color accents, featuring a theme drawn from combining parts of online sex work subculture and flash tattoo style.
 
 <img src="images/spinnerdemo.gif">
 
