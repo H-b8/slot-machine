@@ -130,32 +130,27 @@ function updateTokens(obj) {
 				d.style.color = 'blue';
 				tkns += 500;
 				console.log(`+ 500 ($$$) = ${tkns}`);
-			}
-			else if (key === 'devil') {
+			} else if (key === 'devil') {
 				f.style.background = 'yellow';
 				f.style.color = 'blue';
 				tkns -= 666;
 				console.log(`- 666 (DEVIL ROW) = ${tkns}`);
-			}
-			else if (key === 'of') {
+			} else if (key === 'of') {
 				g.style.background = 'yellow';
 				g.style.color = 'blue';
 				tkns -= Math.floor(tkns * .20);
 				console.log(`- 20% (ONLYFANS PAYCUT) = ${tkns}`);
-			}
-			else if (key === 'mv') {
+			} else if (key === 'mv') {
 				h.style.background = 'yellow';
 				h.style.color = 'blue';
 				tkns -= Math.floor(tkns * .40);
 				console.log(`- 40% (MANYVIDS PAY CUT) = ${tkns}`);
-			}
-			else if (key === 'trainingkit') {
+			} else if (key === 'trainingkit') {
 				j.style.background = 'yellow';
 				j.style.color = 'blue';
 				tkns = 0;
 				console.log(`YOU'RE F*CKED = ${tkns}`);
-			}
-			else {
+			} else {
 				winSound.play();
 				b.style.background = 'yellow';
 				b.style.color = 'blue';
@@ -169,26 +164,22 @@ function updateTokens(obj) {
 				e.style.color = 'blue';
 				tkns -= 100;
 				console.log(`- 100 (DOUBLE DEVILS) = ${tkns}`);
-			}
-			else if (key === 'of') {
+			} else if (key === 'of') {
 				g.style.background = 'yellow';
 				g.style.color = 'blue';
 				tkns -= Math.floor(tkns * .20);
 				console.log(`- 20% (ONLYFANS PAY CUT) = ${tkns}`);
-			}
-			else if (key === 'mv') {
+			} else if (key === 'mv') {
 				h.style.background = 'yellow';
 				h.style.color = 'blue';
 				tkns -= Math.floor(tkns * .40);
 				console.log(`- 40% (MANYVIDS PAY CUT) = ${tkns}`);
-			}
-			else if (key === 'trainingkit') {
+			} else if (key === 'trainingkit') {
 				k.style.background = 'yellow';
 				k.style.color = 'blue';
 				tkns -= Math.floor(tkns * .50);
 				console.log(`- 50% (DOUBLE T.K.) = ${tkns}`);
-			}
-			else {
+			} else {
 				winSound.play();
 				a.style.background = 'yellow';
 				a.style.color = 'blue';
@@ -206,8 +197,7 @@ function updateTokens(obj) {
 	}
 	if (tkns > 0) {
 		tokens.innerText = leadingZeros(tkns, 6);
-	}
-	else {
+	} else {
 		tkns = 0;
 		tokens.innerText = '000000'
 	}
