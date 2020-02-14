@@ -2,7 +2,7 @@
 
 A casino favorite presented in a black and white minimalist design with primary color accents, featuring a theme drawn from combining parts of online sex work subculture and flash tattoo style.
 
-<img src="images/spinnerdemo.gif">
+<img src="images/gamedemo.gif">
 
 ## FEATURES AND HOW-TO'S
 
