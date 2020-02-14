@@ -8,7 +8,7 @@ HTML, CSS, JavaScript, Procreate
 
 <img src="images/spinnerdemo.gif" width="500">
 
-## FEATURES AND HOW-TO'S
+### FEATURES AND HOW-TO'S
 
 To minimize clutter, the spin function is activated when a player clicks anywhere within the spinner section, and along with the total score update, the amount accumulated or lost during the current spin are then rendered by playing sound and highlighting the corresponding text in a style reminiscent to token tip alerts recieved during live cam streams.
 
