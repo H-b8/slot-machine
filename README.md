@@ -13,7 +13,7 @@ Like any other casino slot machine, the player may continue for as long as they 
 
 ## <a href="https://h-b8.github.io/slot-machine-game/" target="_blank">FOR A GOOD TIME, CLICK TO PLAY!</a>
 
-# ICE BOX ITEMS
+### ICE BOX ITEMS
 
 - Responsive design for different browser window sizes, mobile, and tablet (As of now, the game is best viewed in a fullscreen browser)
 - Add payment processor to create real slot machine
