@@ -11,7 +11,7 @@ Like any other casino slot machine, the player may continue for as long as they 
 
 <img src="images/gamescreenshot.png">
 
-<a href="https://h-b8.github.io/slot-machine-game/" target="_blank">FOR A GOOD TIME, CLICK TO PLAY!</a>
+## <a href="https://h-b8.github.io/slot-machine-game/" target="_blank">FOR A GOOD TIME, CLICK TO PLAY!</a>
 
 ### ICE BOX ITEMS
 
