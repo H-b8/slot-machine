@@ -2,8 +2,11 @@
 
 A casino favorite presented in a black and white minimalist design with primary color accents; featuring a theme inspired by online sex work subculture, and drawn in a graphic blackwork tattoo style.
 
-<img src="images/spinnerdemo.gif" width="500">
+### TECHNOLOGIES USED 
 
+HTML, CSS, JavaScript, Procreate
+
+<img src="images/spinnerdemo.gif" width="500">
 
 ## FEATURES AND HOW-TO'S
 
