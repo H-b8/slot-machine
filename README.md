@@ -9,7 +9,7 @@ All slot images were illustrated by the game's maker (Me!). To minimize clutter,
 
 Like any other casino slot machine, the player may continue for as long as they like by coughing up sufficient funds, and certain combinations of images result in wins and losses of varrying amounts. But in the spirit of the game's theme, certain combinations will perform relevant actions, such as site logos taking a cut of the player's earnings the same way they do to their models. 
 
-<img src="images/gamedemo.gif">
+<img src="images/gamescreenshot.png">
 
 <a href="https://h-b8.github.io/slot-machine-game/" target="_blank">FOR A GOOD TIME, CLICK TO PLAY!</a>
 
