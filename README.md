@@ -1,6 +1,6 @@
 <img src="images/headertext.png">
 
-A casino favorite presented in a black and white minimalist design with primary color accents; featuring a theme inspired by online sex work subculture, and drawn in a graphic blackwork tattoo style.
+A casino favorite presented in a black and white minimalist design with primary color accents; featuring a theme inspired by online sex work subculture, and illustrated in a graphic blackwork tattoo style.
 
 ### TECHNOLOGIES USED 
 
