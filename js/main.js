@@ -6,10 +6,10 @@ const slotValues = [
 	{ name: 'cherries', image: 'images/cherries.png' },
 	{ name: 'devil', image: 'images/devil.png' },
 	{ name: 'dollar', image: 'images/dollar.png' },
-	{ name: 'mv', image: 'images/mv.png' }
+	{ name: 'mv', image: 'images/mv.png' },
 	{ name: 'of', image: 'images/of.png' },
 	{ name: 'pleaser', image: 'images/pleaser.png' },
-	{ name: 'trainingkit', image: 'images/trainingkit.png' },
+	{ name: 'trainingkit', image: 'images/trainingkit.png' }
 ];
 
 const highlightIds = [a, b, c, d, e, f, g, h, j, k];
