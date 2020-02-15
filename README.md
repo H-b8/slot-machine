@@ -12,7 +12,7 @@ HTML, CSS, JavaScript, Procreate
 
 To minimize clutter of extra buttons or a score board: The spin function is activated when a player clicks anywhere within the spinner section. Like any other casino slot machine, the player may continue to play for as long as they like by coughing up sufficient funds.
 
-Along with the total score update in the bar beneath the spinner, the amount accumulated or lost during the current spin are rendered by playing sounds and highlighting the corresponding "Combinations" text in a style reminiscent to token tip alerts recieved during live cam streams. Certain combinations of images result in wins and losses of varrying amounts, but in the spirit of the game's theme, certain combinations will perform correlating actions, one of which is site logos taking a percentage of the player's earnings. A comedic effect, as well as commentary on content and service websites taking large cuts from both their performers and customers.
+Along with the total score update in the bar beneath the spinner, the amount accumulated or lost during the current spin are rendered by playing sounds and highlighting the corresponding "WINNING" or "LOSER" combination text in a style reminiscent to token tip alerts recieved during live cam streams. In the spirit of the game's theme, certain combinations will perform correlating actions, one of which is site logos taking a percentage of the player's earnings. A comedic effect which also serves as commentary on content and service websites taking large cuts from both their performers and customers.
 
 <img src="images/gamescreenshot.png" width="500">
 
