@@ -2,14 +2,14 @@
 
 
 const slotValues = [
-	{ name: 'dollar', image: 'images/dollar.png' },
-	{ name: 'pleaser', image: 'images/pleaser.png' },
-	{ name: 'cherries', image: 'images/cherries.png' },
-	{ name: 'trainingkit', image: 'images/trainingkit.png' },
 	{ name: 'angel', image: 'images/angel.png' },
+	{ name: 'cherries', image: 'images/cherries.png' },
 	{ name: 'devil', image: 'images/devil.png' },
-	{ name: 'of', image: 'images/of.png' },
+	{ name: 'dollar', image: 'images/dollar.png' },
 	{ name: 'mv', image: 'images/mv.png' }
+	{ name: 'of', image: 'images/of.png' },
+	{ name: 'pleaser', image: 'images/pleaser.png' },
+	{ name: 'trainingkit', image: 'images/trainingkit.png' },
 ];
 
 const highlightIds = [a, b, c, d, e, f, g, h, j, k];
@@ -25,12 +25,12 @@ let spinResults = [];
 /* * * * * * * * * CASHED ELEMENT REFERENCES * * * * * * * * */
 
 
-let placeBet = document.querySelector('#placebet');
 let cashIn = document.querySelector('#cashin');
-let cashOut = document.querySelector('#cashout');
+let placeBet = document.querySelector('#placebet');
 let spinner = document.querySelector('#spinner');
 let spinSound = document.querySelector('#spinsound');
 let winSound = document.querySelector('#winsound');
+let cashOut = document.querySelector('#cashout');
 
 
 /* * * * * * * * * * * EVENT LISTENERS * * * * * * * * * * * */
@@ -138,12 +138,12 @@ function updateTokens(obj) {
 				g.style.background = 'yellow';
 				g.style.color = 'blue';
 				tkns -= Math.floor(tkns * .20);
-				console.log(`- 20% (ONLYFANS PAYCUT) = ${tkns}`);
+				console.log(`- 20% (O.F. PAYCUT) = ${tkns}`);
 			} else if (key === 'mv') {
 				h.style.background = 'yellow';
 				h.style.color = 'blue';
 				tkns -= Math.floor(tkns * .40);
-				console.log(`- 40% (MANYVIDS PAY CUT) = ${tkns}`);
+				console.log(`- 40% (M.V. PAY CUT) = ${tkns}`);
 			} else if (key === 'trainingkit') {
 				j.style.background = 'yellow';
 				j.style.color = 'blue';
@@ -167,12 +167,12 @@ function updateTokens(obj) {
 				g.style.background = 'yellow';
 				g.style.color = 'blue';
 				tkns -= Math.floor(tkns * .20);
-				console.log(`- 20% (ONLYFANS PAY CUT) = ${tkns}`);
+				console.log(`- 20% (O.F. PAY CUT) = ${tkns}`);
 			} else if (key === 'mv') {
 				h.style.background = 'yellow';
 				h.style.color = 'blue';
 				tkns -= Math.floor(tkns * .40);
-				console.log(`- 40% (MANYVIDS PAY CUT) = ${tkns}`);
+				console.log(`- 40% (M.V. PAY CUT) = ${tkns}`);
 			} else if (key === 'trainingkit') {
 				k.style.background = 'yellow';
 				k.style.color = 'blue';
