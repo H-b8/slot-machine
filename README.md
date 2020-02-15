@@ -10,9 +10,9 @@ HTML, CSS, JavaScript, Procreate
 
 ### FEATURES AND HOW-TO'S
 
-To minimize clutter, the spin function is activated when a player clicks anywhere within the spinner section, and along with the total score update, the amount accumulated or lost during the current spin are then rendered by playing sound and highlighting the corresponding text in a style reminiscent to token tip alerts recieved during live cam streams.
+To minimize clutter of extra buttons or a score board: The spin function is activated when a player clicks anywhere within the spinner section. Like any other casino slot machine, the player may continue to play for as long as they like by coughing up sufficient funds.
 
-Like any other casino slot machine, the player may continue for as long as they like by coughing up sufficient funds, and certain combinations of images result in wins and losses of varrying amounts. But in the spirit of the game's theme, certain combinations will perform relevant actions, such as site logos taking a cut of the player's earnings the same way they do to their models. 
+Along with the total score update in the bar beneath the spinner, the amount accumulated or lost during the current spin are rendered by playing sounds and highlighting the corresponding "Combinations" text in a style reminiscent to token tip alerts recieved during live cam streams. Certain combinations of images result in wins and losses of varrying amounts, but in the spirit of the game's theme, certain combinations will perform correlating actions, one of which is site logos taking a percentage of the player's earnings. A comedic effect, as well as commentary on content and service websites taking large cuts from both their performers and customers.
 
 <img src="images/gamescreenshot.png" width="500">
 
@@ -21,5 +21,5 @@ Like any other casino slot machine, the player may continue for as long as they 
 ### ICE BOX ITEMS
 
 - Responsive design for different browser window sizes, mobile, and tablet (As of now, the game is best viewed in a fullscreen browser)
-- Add payment processor to create real slot machine
+- Add payment processor to create real slot machine experience
 - Instead of resetting game, 'cash out' button will lead to a page where players can redeem their tokens for prizes
