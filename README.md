@@ -16,7 +16,7 @@ Along with the total score update in the bar beneath the spinner, the amount acc
 
 <img src="images/gamescreenshot.png" width="500">
 
-## <a href="https://h-b8.github.io/slot-machine-game/" target="_blank">FOR A GOOD TIME, CLICK TO PLAY!</a>
+## <a href="https://h-b8.github.io/slot-machine/" target="_blank">FOR A GOOD TIME, CLICK TO PLAY!</a>
 
 ### ICE BOX ITEMS
 
