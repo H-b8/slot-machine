@@ -22,7 +22,9 @@ body {
     text-align: center;
 }
 
-#header-container {
+/* * * * * * * * * * HEADER * * * * * * * * * */
+
+#header {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
