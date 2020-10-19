@@ -6,7 +6,6 @@
         url('/CloisterBlack-Light.woff') format('woff'),
         url('/CloisterBlack-Light.ttf') format('truetype'),
         url('/CloisterBlack-Light.svg#CloisterBlack-Light') format('svg');
-    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
@@ -23,10 +22,23 @@ body {
     text-align: center;
 }
 
+#header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
 h1 {
     font-family: 'CloisterBlack-Light', Arial Black;
     font-size: 70px;
     margin: 0;
+    font-weight: normal;
+}
+
+#star {
+    font-family: 'CloisterBlack-Light', Arial Black;
+    font-size: 80px;
+    line-height: 20px;
 }
 
 /* * * * * * * * * * INSTRUCTIONS DIV * * * * * * * * * */
