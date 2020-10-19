@@ -121,7 +121,6 @@ input:focus {
 /* * * * * * * * * * GAME DIV * * * * * * * * * */
 
 #game {
-    margin-top:10px;
     display: flex;
     flex-direction: column;
 }
@@ -129,10 +128,7 @@ input:focus {
 /* * * * * * * * * * SPINNER SECTION * * * * * * * * * */
 
 #spinner {
-    padding: 0px 15px 0px 15px;
-    margin-right: 0px;
-    margin-bottom: 10px;
-    width:500px;
+    margin: 10px 0;
     height:300px;
     display: flex;
     flex-direction: row;
