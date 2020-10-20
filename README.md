@@ -1,4 +1,4 @@
-<img src="images/headertext.png">
+<img src="public/headertext.png">
 
 A casino favorite brought to you with a minimal aesthetic, online sex work subculture theme, and fun blackwork flash tattoo styled illustrations.
 
@@ -6,7 +6,7 @@ A casino favorite brought to you with a minimal aesthetic, online sex work subcu
 
 HTML, CSS, Vanilla JavaScript, Procreate
 
-<img src="images/spinnerdemo.gif" width="500">
+<img src="public/spinnerdemo.gif" width="500">
 
 ### CURRENT FEATURES + HOW-TO'S
 
@@ -14,7 +14,7 @@ To minimize clutter of extra buttons or a score board: The spin function is acti
 
 Along with the total score update in the bar beneath the spinner, the amount accumulated or lost during the current spin are rendered by playing sounds and highlighting the corresponding "WINNING" or "LOSING" combination text in a style reminiscent to token tip alerts recieved during live cam streams. In the spirit of the game's theme, certain combinations will perform correlating actions, one of which is site logos taking a percentage of the player's earnings. A comedic effect which also serves as commentary on content and service websites taking large cuts from both their performers and customers.
 
-<img src="images/gamescreenshot.png" width="500">
+<img src="public/gamescreenshot.png" width="500">
 
 ## <a href="https://h-b8.github.io/slot-machine/" target="_blank">FOR A GOOD TIME, CLICK TO PLAY!</a>
 
