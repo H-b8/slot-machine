@@ -1,6 +1,6 @@
 <img src="public/headertext.png">
 
-A casino favorite brought to you with a minimal aesthetic, online sex work subculture theme, and fun blackwork flash tattoo styled illustrations.
+A casino favorite brought to your browser with a minimal aesthetic, an online sex work subculture theme, and fun blackwork flash tattoo styled illustrations.
 
 ### TECHNOLOGIES USED 
 
