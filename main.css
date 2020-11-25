@@ -1,13 +1,15 @@
+@charset "UTF-8";
+
 @font-face {
-    font-family: 'Cloister';
-    src: url('/CloisterBlack-Light.eot');
-    src: url('/CloisterBlack-Light.eot?#iefix') format('embedded-opentype'),
-        url('/CloisterBlack-Light.woff2') format('woff2'),
-        url('/CloisterBlack-Light.woff') format('woff'),
-        url('/CloisterBlack-Light.ttf') format('truetype'),
-        url('/CloisterBlack-Light.svg#CloisterBlack-Light') format('svg');
+    font-family: 'CloisterBlack-Light';
+    src: url('/fonts/CloisterBlack-Light.eot');
+    src: url('/fonts/CloisterBlack-Light.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/CloisterBlack-Light.woff2') format('woff2'),
+        url('/fonts/CloisterBlack-Light.woff') format('woff'),
+        url('/fonts/CloisterBlack-Light.ttf') format('truetype'),
+        url('/fonts/CloisterBlack-Light.svg#CloisterBlack-Light') format('svg');
     font-style: normal;
-    font-display: swap;
+    font-weight: normal;
 }
 
 *, *:before, *:after {
