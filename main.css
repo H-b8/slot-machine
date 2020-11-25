@@ -8,9 +8,7 @@
         url('/fonts/CloisterBlack-Light.woff') format('woff'),
         url('/fonts/CloisterBlack-Light.ttf') format('truetype'),
         url('/fonts/CloisterBlack-Light.svg#CloisterBlack-Light') format('svg');
-    font-style: normal;
-    font-weight: normal;
-    font-display: block;
+    font-display: optional;
 }
 
 *, *:before, *:after {
@@ -39,7 +37,7 @@ body {
 
 h1 {
     font-family: 'CloisterBlack-Light', Ariel Black;
-    font-size: 70px;
+    font-size: 75px;
     margin: 0;
     font-weight: normal;
 }

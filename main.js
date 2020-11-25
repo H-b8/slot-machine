@@ -22,7 +22,7 @@ let tkns;
 let spinResults = [];
 
 
-/* * * * * * * * * CASHED ELEMENT REFERENCES * * * * * * * * */
+/* * * * * * * * * CACHED ELEMENT REFERENCES * * * * * * * * */
 
 
 let cashIn = document.querySelector('#cashin');
@@ -60,7 +60,6 @@ function initialize() {
 
 	tkns = 0;
 	tokens.innerText = '000000';
-	console.log(`TOKENS = ${tkns}`)
 	removeHighlight();
 	for (let i = 0; i < 3; i++) {
 		document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random() * slotValues.length)].image}`;
