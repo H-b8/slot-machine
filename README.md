@@ -1,4 +1,4 @@
-<img src="public/headertext.png">
+<img src="public/headertext.png" width="500">
 
 A casino favorite brought to your browser with a minimal aesthetic, an online sex work subculture theme, and fun blackwork flash tattoo styled illustrations.
 
