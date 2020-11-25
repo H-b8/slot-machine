@@ -10,6 +10,7 @@
         url('/fonts/CloisterBlack-Light.svg#CloisterBlack-Light') format('svg');
     font-style: normal;
     font-weight: normal;
+    font-display: block;
 }
 
 *, *:before, *:after {
@@ -32,15 +33,19 @@ body {
     align-items: flex-end;
 }
 
+#header-image {
+    pointer-events: none;
+}
+
 h1 {
-    font-family: 'CloisterBlack-Light', Arial Black;
+    font-family: 'CloisterBlack-Light', Ariel Black;
     font-size: 70px;
     margin: 0;
     font-weight: normal;
 }
 
 #star {
-    font-family: 'CloisterBlack-Light', Arial Black;
+    font-family: 'CloisterBlack-Light', Ariel Black;
     font-size: 90px;
     line-height: 5px;
 }
