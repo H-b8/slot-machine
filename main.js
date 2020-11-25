@@ -72,7 +72,6 @@ function payMe(evt) {
 	if (!isNaN(cashIn.value)) {
 		tkns += Math.floor(cashIn.value / 0.05);
 		tokens.innerText = leadingZeros(tkns, 6);
-		console.log(`+ ${cashIn.value / 0.05} (VIA CASH) = ${tkns} TOKENS`);
 		cashIn.value = '0.00';
 		cashIn.style = null;
 	} else {
@@ -87,7 +86,6 @@ function spin(evt) {
 	removeHighlight();
 	tkns -= 5;
 	tokens.innerText = leadingZeros(tkns, 6);
-	console.log(`- 5 (VIA SPIN) = ${tkns} TOKENS`);
 	for (let i = 0; i < 3; i++) {
 		spinResults[i] = slotValues[Math.floor(Math.random() * slotValues.length)];
 	}
@@ -114,7 +112,6 @@ function matchTally(objArr) {
 		acc[slot.name] = acc[slot.name] ? acc[slot.name] + 1 : 1;
 		return acc;
 	}, {});
-	console.log(slotCount);
 	updateTokens(slotCount);
 }
 
@@ -127,33 +124,27 @@ function updateTokens(obj) {
 				d.style.background = 'yellow';
 				d.style.color = 'blue';
 				tkns += 500;
-				console.log(`+ 500 ($$$) = ${tkns}`);
 			} else if (key === 'devil') {
 				f.style.background = 'yellow';
 				f.style.color = 'blue';
 				tkns -= 666;
-				console.log(`- 666 (DEVIL ROW) = ${tkns}`);
 			} else if (key === 'of') {
 				g.style.background = 'yellow';
 				g.style.color = 'blue';
 				tkns -= Math.floor(tkns * .20);
-				console.log(`- 20% (O.F. PAYCUT) = ${tkns}`);
 			} else if (key === 'mv') {
 				h.style.background = 'yellow';
 				h.style.color = 'blue';
 				tkns -= Math.floor(tkns * .40);
-				console.log(`- 40% (M.V. PAY CUT) = ${tkns}`);
 			} else if (key === 'trainingkit') {
 				j.style.background = 'yellow';
 				j.style.color = 'blue';
 				tkns = 0;
-				console.log(`YOU'RE F*CKED = ${tkns}`);
 			} else {
 				winSound.play();
 				b.style.background = 'yellow';
 				b.style.color = 'blue';
 				tkns += 100;
-				console.log(`+ 100 (PERF ROW) = ${tkns}`);
 			}
 		}
 		if (obj[key] === 2) {
@@ -161,28 +152,23 @@ function updateTokens(obj) {
 				e.style.background = 'yellow';
 				e.style.color = 'blue';
 				tkns -= 100;
-				console.log(`- 100 (DOUBLE DEVILS) = ${tkns}`);
 			} else if (key === 'of') {
 				g.style.background = 'yellow';
 				g.style.color = 'blue';
 				tkns -= Math.floor(tkns * .20);
-				console.log(`- 20% (O.F. PAY CUT) = ${tkns}`);
 			} else if (key === 'mv') {
 				h.style.background = 'yellow';
 				h.style.color = 'blue';
 				tkns -= Math.floor(tkns * .40);
-				console.log(`- 40% (M.V. PAY CUT) = ${tkns}`);
 			} else if (key === 'trainingkit') {
 				k.style.background = 'yellow';
 				k.style.color = 'blue';
 				tkns -= Math.floor(tkns * .50);
-				console.log(`- 50% (DOUBLE T.K.) = ${tkns}`);
 			} else {
 				winSound.play();
 				a.style.background = 'yellow';
 				a.style.color = 'blue';
 				tkns += 50
-				console.log(`+ 50 (DOUBLES) = ${tkns}`);
 			}
 		}
 		if (obj[key] === 1 && key === 'dollar') {
@@ -190,7 +176,6 @@ function updateTokens(obj) {
 			c.style.background = 'yellow';
 			c.style.color = 'blue';
 			tkns += 20;
-			console.log(`+ 20 ($ SIGN) = ${tkns}`);
 		}
 	}
 	if (tkns > 0) {
