@@ -12,7 +12,7 @@ const slotValues = [
 	{ name: 'trainingkit', image: 'images/trainingkit.png' }
 ];
 
-const highlightIds = [a, b, c, d, e, f, g, h, j, k];
+// const highlightIds = [a, b, c, d, e, f, g, h, j, k];
 
 
 /* * * * * * * * * * APP'S STATE VARIABLES * * * * * * * * * */
@@ -38,7 +38,6 @@ let cashOut = document.querySelector('#cashout');
 
 placeBet.addEventListener('click', payMe);
 cashOut.addEventListener('click', initialize);
-
 spinner.addEventListener('click', function (evt) {
 
 	if (tkns >= 5) {
