@@ -1,69 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta property="og:image" content="images/metaimage.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SL*T MACHINE</title>
-    <link rel="stylesheet" href="main.css">
-    <script defer src="main.js"></script>
-    <audio id="spinsound" src="sounds/cb_liltip.mp3"></audio>
-    <audio id="winsound" src="sounds/cb_bigtip.mp3"></audio>
-</head>
+    <head>
+        <meta property="og:image" content="images/metaimage.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>SL*T MACHINE</title>
+        <link rel="stylesheet" href="main.css">
+        <script defer src="main.js"></script>
+        <audio id="spinsound" src="sounds/cb_liltip.mp3"></audio>
+        <audio id="winsound" src="sounds/cb_bigtip.mp3"></audio>
+    </head>
 
-<body>
-    <!-- <div id="header"><h1>Sl</h1><span id="star">*</span><h1>t Machine</h1></div> -->
-    <!-- FONT ISSUES WITH SAFARI >:( -->
-    
-    <img src="images/headertext.png" id="header-image">
-    <div id="game">
-        <div id="instructions">
-            <!-- <h3>WINNING COMBINATIONS</h3> -->
-            <div class="marquee">
-                <p>
-                    <span id="a">2 MATCHES = 50 TOKENS</span> &nbsp; —– &nbsp;
-                    <span id="b"></span>3 MATCHES = 50 TOKENS</span> &nbsp; —– &nbsp;
-                    <span id="c">1 '$' = 20 TOKENS</span> &nbsp; —– &nbsp;
-                    <span id="d">3 '$'s = 100 TOKENS</span>
-                <!-- </p>
-            </div> -->
-            <!-- <h3>LOSING COMBINATIONS</h3> -->
+    <body>
+        <!-- <div id="header"><h1>Sl</h1><span id="star">*</span><h1>t Machine</h1></div> -->
+        <!-- FONT ISSUES WITH SAFARI >:( -->
 
-            <!-- <div class="marquee">
-                <p> -->
-                    <span id="e">2 DEVILS = -100 TOKENS</span> &nbsp; —– &nbsp;
-                    <span id="f">3 DEVILS = -666 TOKENS</span>
-                    <span id="g">2+ CIRCLES = -20% TOKENS</span> &nbsp; —– &nbsp;
-                    <span id="h">2+ HEARTS = -40% TOKENS</span>
-                    <span id="k">2 KITS = -50% TOKENS</span> &nbsp; —– &nbsp;
-                    <span id="j">3 KITS = -100% TOKENS</span>
-                </p>
+        <img src="images/headertext.png" id="header-image">
+        <div id="game">
+            <div id="instructions">
+                <!-- <h3>WINNING COMBINATIONS</h3> -->
+                <div class="marquee">
+                    <p>
+                        <span id="a">2 MATCHES = 50 TOKENS</span> &nbsp; —– &nbsp;
+                        <span id="b"></span>3 MATCHES = 50 TOKENS</span> &nbsp; —– &nbsp;
+                        <span id="c">1 '$' = 20 TOKENS</span> &nbsp; —– &nbsp;
+                        <span id="d">3 '$'s = 100 TOKENS</span>
+                        <!-- </p>
+                </div> -->
+                        <!-- <h3>LOSING COMBINATIONS</h3> -->
+
+                        <!-- <div class="marquee">
+                    <p> -->
+                        <span id="e">2 DEVILS = -100 TOKENS</span> &nbsp; —– &nbsp;
+                        <span id="f">3 DEVILS = -666 TOKENS</span>
+                        <span id="g">2+ CIRCLES = -20% TOKENS</span> &nbsp; —– &nbsp;
+                        <span id="h">2+ HEARTS = -40% TOKENS</span>
+                        <span id="k">2 KITS = -50% TOKENS</span> &nbsp; —– &nbsp;
+                        <span id="j">3 KITS = -100% TOKENS</span>
+                    </p>
+                </div>
+
+                <section id="bet">
+                    <h3>* * * * * * * $0.05 = 1 TOKEN, 5 TOKENS/SPIN * * * * * * *</h3>
+                    <div class="row-container">
+                        <input id="cashin" value="0.00">
+                        <button id="placebet">PLACE BET</button>
+                    </div>
+                </section>
             </div>
 
-            <section id="bet">
-                <h3>* * * * * * * $0.05 = 1 TOKEN, 5 TOKENS/SPIN * * * * * * *</h3>
-                <div class="row-container">
-                    <input id="cashin" value="0.00">
-                    <button id="placebet">PLACE BET</button>
-                </div>
+            <div id="spinner">
+                <img class="slot-image" id="0" src="">
+                <img class="slot-image" id="1" src="">
+                <img class="slot-image" id="2" src="">
+            </div>
+
+            <section id="money">
+                <h2 id="label" class="score">TOKENS:</h2>
+                <h2 id="tokens" class="score"></h2>
+                <button id="cashout">CA$H OUT</button>
             </section>
         </div>
-
-        <div id="spinner">
-            <div><img class="slot" id="0" src=""></div>
-            <div><img class="slot" id="1" src=""></div>
-            <div><img class="slot" id="2" src=""></div>
-        </div>
-
-        <section id="money">
-            <h2 id="label" class="score">TOKENS:</h2>
-            <h2 id="tokens" class="score"></h2>
-            <button id="cashout">CA$H OUT</button>
-        </section>
-    </div>
-    <footer>MADE BY BAITES</footer>
-</body>
+        <footer>MADE BY BAITES</footer>
+    </body>
 
 </html>
