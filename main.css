@@ -16,7 +16,6 @@
 }
 
 body {
-    margin-top: 2vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,43 +24,56 @@ body {
 
 /* * * * * * * * * * HEADER * * * * * * * * * */
 
-#header {
+/* #header {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-}
+} */
 
 #header-image {
+    margin-top: 20px;
     pointer-events: none;
+    width: 500px;
+}
+@media (max-width: 600px){
+    #header-image {
+        width: 80%;
+    }
 }
 
-h1 {
+/* h1 {
     font-family: 'CloisterBlack-Light', Ariel Black;
     font-size: 75px;
     margin: 0;
     font-weight: normal;
-}
+} */
 
-#star {
+/* #star {
     font-family: 'CloisterBlack-Light', Ariel Black;
     font-size: 90px;
     line-height: 5px;
-}
+} */
 
 /* * * * * * * * * * INSTRUCTIONS DIV * * * * * * * * * */
 
 #instructions {
-    width:500px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     border-style: double;
     border-width: 6px;
-    padding: 20px 15px 20px 15px;
+    padding: 30px 15px;
+}
+@media (max-width: 600px) {
+    #instructions {
+        width: 85%;
+    }
 }
 
 h3 {
     margin-top: 0px;
     margin-bottom: 10px;
+    /* font-size: 2vw; */
 }
 
 p {
@@ -76,16 +88,24 @@ p {
     padding-bottom: 0px;
 }
 
+.row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+}
+
 input, input:active {
     color: #DADDDD;
-    height: 30px;
-    width: 340px;
+    height: 90%;
+    width: 70%;
     border: solid;
     border-color: black;
     border-width: 3px;
     outline: none;
     font-size: 20px;
     padding-left: 10px;
+    margin-right: 10px;
 }
 
 input:focus {
@@ -93,18 +113,20 @@ input:focus {
 }
 
 #placebet, #placebet:active, #placebet.focus  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: black;
     color: white;
-    padding: 11px 0px 11px 0px;
     width: 130px;
-    height: 38px;
+    height: 44px;
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 2px;
-    align-self: center;
+   
     outline: none;
-    border: none;
-    vertical-align: bottom;
+    border: 3px solid black;
+             
 }
 
 #placebet:hover {
@@ -131,23 +153,30 @@ input:focus {
     display: flex;
     flex-direction: column;
 }
+@media (max-width: 600px) {
+    #game {
+        width: 80%;
+    }
+}
 
 /* * * * * * * * * * SPINNER SECTION * * * * * * * * * */
 
 #spinner {
     margin: 10px 0;
-    height:300px;
+    /* width: 100%; */
+    padding: 30px 15px;
+    /* height:300px; */
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content:space-between;
     align-items: center;
     border-style: double;
     border-width: 6px;
 }
 
 .slot {
-    width:150px;
-    height: 250px;
+    width: 150px;
+    /* height: 200px; */
     border: solid;
     border-width: 3px;
 }
@@ -155,9 +184,9 @@ input:focus {
 /* * * * * * * * * * TOKEN SCORE BAR * * * * * * * * * */
 
 #money {
-    padding: 0px 15px 0px 15px;
+    padding: 0px 15px;
     margin-right: 0px;
-    width:500px;
+    /* width:500px; */
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -170,6 +199,7 @@ input:focus {
     background: black;
     color: white;
     width: 130px;
+    height: 44px;
     padding: 10px 15px 10px 15px;
     font-size: 15px;
     font-weight: 600;
@@ -192,4 +222,22 @@ input:focus {
 footer {
     text-align: center;
     margin-top: 10px;
+}
+
+
+.marquee {
+    width: 100%;
+    line-height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
 }

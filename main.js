@@ -60,10 +60,10 @@ function initialize() {
 
 	tkns = 0;
 	tokens.innerText = '000000';
-	removeHighlight();
+	// removeHighlight();
 	for (let i = 0; i < 3; i++) {
 		document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random() * slotValues.length)].image}`;
-		document.getElementById(`${i}`).style.width = '150px';
+		// document.getElementById(`${i}`).style.width = '120px';
 	}
 }
 
@@ -83,7 +83,7 @@ function payMe(evt) {
 function spin(evt) {
 
 	spinSound.play();
-	removeHighlight();
+	// removeHighlight();
 	tkns -= 5;
 	tokens.innerText = leadingZeros(tkns, 6);
 	for (let i = 0; i < 3; i++) {
@@ -121,60 +121,60 @@ function updateTokens(obj) {
 		if (obj[key] === 3) {
 			if (key === 'dollar') {
 				winSound.play();
-				d.style.background = 'yellow';
-				d.style.color = 'blue';
+				// d.style.background = 'yellow';
+				// d.style.color = 'blue';
 				tkns += 500;
 			} else if (key === 'devil') {
-				f.style.background = 'yellow';
-				f.style.color = 'blue';
+				// f.style.background = 'yellow';
+				// f.style.color = 'blue';
 				tkns -= 666;
 			} else if (key === 'of') {
-				g.style.background = 'yellow';
-				g.style.color = 'blue';
+				// g.style.background = 'yellow';
+				// g.style.color = 'blue';
 				tkns -= Math.floor(tkns * .20);
 			} else if (key === 'mv') {
-				h.style.background = 'yellow';
-				h.style.color = 'blue';
+				// h.style.background = 'yellow';
+				// h.style.color = 'blue';
 				tkns -= Math.floor(tkns * .40);
 			} else if (key === 'trainingkit') {
-				j.style.background = 'yellow';
-				j.style.color = 'blue';
+				// j.style.background = 'yellow';
+				// j.style.color = 'blue';
 				tkns = 0;
 			} else {
 				winSound.play();
-				b.style.background = 'yellow';
-				b.style.color = 'blue';
+				// b.style.background = 'yellow';
+				// b.style.color = 'blue';
 				tkns += 100;
 			}
 		}
 		if (obj[key] === 2) {
 			if (key === 'devil') {
-				e.style.background = 'yellow';
-				e.style.color = 'blue';
+				// e.style.background = 'yellow';
+				// e.style.color = 'blue';
 				tkns -= 100;
 			} else if (key === 'of') {
-				g.style.background = 'yellow';
-				g.style.color = 'blue';
+				// g.style.background = 'yellow';
+				// g.style.color = 'blue';
 				tkns -= Math.floor(tkns * .20);
 			} else if (key === 'mv') {
-				h.style.background = 'yellow';
-				h.style.color = 'blue';
+				// h.style.background = 'yellow';
+				// h.style.color = 'blue';
 				tkns -= Math.floor(tkns * .40);
 			} else if (key === 'trainingkit') {
-				k.style.background = 'yellow';
-				k.style.color = 'blue';
+				// k.style.background = 'yellow';
+				// k.style.color = 'blue';
 				tkns -= Math.floor(tkns * .50);
 			} else {
 				winSound.play();
-				a.style.background = 'yellow';
-				a.style.color = 'blue';
+				// a.style.background = 'yellow';
+				// a.style.color = 'blue';
 				tkns += 50
 			}
 		}
 		if (obj[key] === 1 && key === 'dollar') {
 			winSound.play();
-			c.style.background = 'yellow';
-			c.style.color = 'blue';
+			// c.style.background = 'yellow';
+			// c.style.color = 'blue';
 			tkns += 20;
 		}
 	}
@@ -186,12 +186,12 @@ function updateTokens(obj) {
 	}
 }
 
-function removeHighlight() {
+// function removeHighlight() {
 
-	for (i = 0; i < highlightIds.length; i++) {
-		highlightIds[i].style = null;
-	}
-}
+// 	for (i = 0; i < highlightIds.length; i++) {
+// 		highlightIds[i].style = null;
+// 	}
+// }
 
 function leadingZeros(n, width, z) {
 
