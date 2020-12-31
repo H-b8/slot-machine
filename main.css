@@ -72,6 +72,7 @@ body {
 /* * * * * * * * * * INSTRUCTIONS DIV * * * * * * * * * */
 
 #instructions {
+	background: white;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -165,6 +166,7 @@ input:focus {
 /* * * * * * * * * * SPINNER SECTION * * * * * * * * * */
 
 #spinner {
+	background: white;
 	margin: 10px 0;
 	width: 100%;
 	padding: 15px;
@@ -192,6 +194,7 @@ input:focus {
 /* * * * * * * * * * TOKEN SCORE BAR * * * * * * * * * */
 
 #money {
+	background: white;
 	padding: 15px;
 	margin-right: 0px;
 	width: 100%;
@@ -247,7 +250,6 @@ footer {
 
 .marquee {
 	width: 100%;
-	line-height: 50px;
 	white-space: nowrap;
 	overflow: hidden;
 	box-sizing: border-box;
@@ -264,4 +266,15 @@ footer {
 	100% {
 		transform: translate(-100%, 0);
 	}
+}
+
+#wall {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#tip {
+	background: yellow;
+	color: blue;
 }

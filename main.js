@@ -119,64 +119,52 @@ function updateTokens(obj) {
 	for (let key in obj) {
 		if (obj[key] === 3) {
 			if (key === 'dollar') {
+				document.getElementById('wall').innerHTML += "<p style='background: yellow; width: 100%;'>SOMEONE TIPPED 500 TOKENS!</p>";
 				winSound.play();
-				// d.style.background = 'yellow';
-				// d.style.color = 'blue';
 				tkns += 500;
 			} else if (key === 'devil') {
-				// f.style.background = 'yellow';
-				// f.style.color = 'blue';
+				document.getElementById('wall').innerHTML += "<p>Demons have stolen 666 of your tokens</p>";
 				tkns -= 666;
 			} else if (key === 'of') {
-				// g.style.background = 'yellow';
-				// g.style.color = 'blue';
+				document.getElementById('wall').innerHTML += "<p>Onlyfans has taken 40% of your earnings</p>";
 				tkns -= Math.floor(tkns * .20);
 			} else if (key === 'mv') {
-				// h.style.background = 'yellow';
-				// h.style.color = 'blue';
+				document.getElementById('wall').innerHTML += "<p>Manyvids has taken 40% of your earnings</p>";
 				tkns -= Math.floor(tkns * .40);
 			} else if (key === 'trainingkit') {
-				// j.style.background = 'yellow';
-				// j.style.color = 'blue';
-				tkns = 0;
+				document.getElementById('wall').innerHTML += "<p style='background: yellow; width: 100%'>NICE GAPE! SOMEONE TIPPED 420 TOKENS!</p>";
+				tkns += 420;
 			} else {
+				document.getElementById('wall').innerHTML += "<p style='background: yellow; width: 100%'>SOMEONE TIPPED 100 TOKENS!</p>";
 				winSound.play();
-				// b.style.background = 'yellow';
-				// b.style.color = 'blue';
 				tkns += 100;
 			}
 		}
+		
 		if (obj[key] === 2) {
 			if (key === 'devil') {
-				// e.style.background = 'yellow';
-				// e.style.color = 'blue';
+				document.getElementById('wall').innerHTML += "<p>Demons have stolen 100 of your tokens</p>";
 				tkns -= 100;
 			} else if (key === 'of') {
-				// g.style.background = 'yellow';
-				// g.style.color = 'blue';
+				document.getElementById('wall').innerHTML += "<p>Onlyfans has taken 20% of your earnings</p>";
 				tkns -= Math.floor(tkns * .20);
 			} else if (key === 'mv') {
-				// h.style.background = 'yellow';
-				// h.style.color = 'blue';
+				document.getElementById('wall').innerHTML += "<p>Manyvids has taken 40% of your earnings</p>";
 				tkns -= Math.floor(tkns * .40);
-			} else if (key === 'trainingkit') {
-				// k.style.background = 'yellow';
-				// k.style.color = 'blue';
-				tkns -= Math.floor(tkns * .50);
 			} else {
+				document.getElementById('wall').innerHTML += "<p style='background: yellow; width: 100%'>SOMEONE TIPPED 50 TOKENS!</p>";
 				winSound.play();
-				// a.style.background = 'yellow';
-				// a.style.color = 'blue';
 				tkns += 50
 			}
 		}
+
 		if (obj[key] === 1 && key === 'dollar') {
+			document.getElementById('wall').innerHTML += "<p style='background: yellow; width: 100%'>SOMEONE TIPPED 20 TOKENS!</p>";
 			winSound.play();
-			// c.style.background = 'yellow';
-			// c.style.color = 'blue';
 			tkns += 20;
 		}
 	}
+
 	if (tkns > 0) {
 		tokens.innerText = leadingZeros(tkns, 6);
 	} else {

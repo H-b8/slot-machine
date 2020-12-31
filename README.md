@@ -8,7 +8,7 @@ HTML, CSS, Vanilla JavaScript, Procreate
 
 <img src="images/spinnerdemo.gif" width="500">
 
-### CURRENT FEATURES + HOW-TO'S
+### FEATURES + HOW-TO'S
 
 To minimize clutter of extra buttons or a score board: The spin function is activated when a player clicks anywhere within the spinner section. Like any other casino slot machine, the player may continue to play for as long as they like, by coughing up sufficient funds.
 
@@ -17,9 +17,3 @@ Along with the total score update in the bar beneath the spinner, the amount acc
 <img src="images/gamescreenshot.png" width="500">
 
 ## <a href="https://h-b8.github.io/slot-machine/" target="_blank">FOR A GOOD TIME, CLICK TO PLAY!</a>
-
-### ICE BOX FEATURES
-
-- Responsive design for different browser window sizes, mobile, and tablet (As of now, the game is best viewed in a fullscreen browser)
-- Add payment processor to create real slot machine experience
-- Instead of resetting game, 'cash out' button will lead to a page where players can redeem their tokens for prizes
