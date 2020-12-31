@@ -2,6 +2,7 @@
 
 
 const slotValues = [
+	
 	{ name: 'angel', image: 'images/angel.png' },
 	{ name: 'cherries', image: 'images/cherries.png' },
 	{ name: 'devil', image: 'images/devil.png' },
@@ -11,8 +12,6 @@ const slotValues = [
 	{ name: 'pleaser', image: 'images/pleaser.png' },
 	{ name: 'trainingkit', image: 'images/trainingkit.png' }
 ];
-
-// const highlightIds = [a, b, c, d, e, f, g, h, j, k];
 
 
 /* * * * * * * * * * APP'S STATE VARIABLES * * * * * * * * * */
@@ -59,10 +58,8 @@ function initialize() {
 
 	tkns = 0;
 	tokens.innerText = '000000';
-	// removeHighlight();
 	for (let i = 0; i < 3; i++) {
 		document.getElementById(`${i}`).src = `${slotValues[Math.floor(Math.random() * slotValues.length)].image}`;
-		// document.getElementById(`${i}`).style.width = '120px';
 	}
 }
 
@@ -82,7 +79,6 @@ function payMe(evt) {
 function spin(evt) {
 
 	spinSound.play();
-	// removeHighlight();
 	tkns -= 5;
 	tokens.innerText = leadingZeros(tkns, 6);
 	for (let i = 0; i < 3; i++) {
@@ -119,49 +115,38 @@ function updateTokens(obj) {
 	for (let key in obj) {
 		if (obj[key] === 3) {
 			if (key === 'dollar') {
-				document.getElementById('wall').innerHTML += "<p style='background: yellow; width: 100%;'>SOMEONE TIPPED 500 TOKENS!</p>";
-				winSound.play();
 				tkns += 500;
+				winSound.play();
 			} else if (key === 'devil') {
-				document.getElementById('wall').innerHTML += "<p>Demons have stolen 666 of your tokens</p>";
 				tkns -= 666;
 			} else if (key === 'of') {
-				document.getElementById('wall').innerHTML += "<p>Onlyfans has taken 40% of your earnings</p>";
 				tkns -= Math.floor(tkns * .20);
 			} else if (key === 'mv') {
-				document.getElementById('wall').innerHTML += "<p>Manyvids has taken 40% of your earnings</p>";
 				tkns -= Math.floor(tkns * .40);
 			} else if (key === 'trainingkit') {
-				document.getElementById('wall').innerHTML += "<p style='background: yellow; width: 100%'>NICE GAPE! SOMEONE TIPPED 420 TOKENS!</p>";
 				tkns += 420;
 			} else {
-				document.getElementById('wall').innerHTML += "<p style='background: yellow; width: 100%'>SOMEONE TIPPED 100 TOKENS!</p>";
-				winSound.play();
 				tkns += 100;
+				winSound.play();
 			}
 		}
 		
 		if (obj[key] === 2) {
 			if (key === 'devil') {
-				document.getElementById('wall').innerHTML += "<p>Demons have stolen 100 of your tokens</p>";
 				tkns -= 100;
 			} else if (key === 'of') {
-				document.getElementById('wall').innerHTML += "<p>Onlyfans has taken 20% of your earnings</p>";
 				tkns -= Math.floor(tkns * .20);
 			} else if (key === 'mv') {
-				document.getElementById('wall').innerHTML += "<p>Manyvids has taken 40% of your earnings</p>";
 				tkns -= Math.floor(tkns * .40);
 			} else {
-				document.getElementById('wall').innerHTML += "<p style='background: yellow; width: 100%'>SOMEONE TIPPED 50 TOKENS!</p>";
-				winSound.play();
 				tkns += 50
+				winSound.play();
 			}
 		}
 
 		if (obj[key] === 1 && key === 'dollar') {
-			document.getElementById('wall').innerHTML += "<p style='background: yellow; width: 100%'>SOMEONE TIPPED 20 TOKENS!</p>";
-			winSound.play();
 			tkns += 20;
+			winSound.play();
 		}
 	}
 
@@ -172,13 +157,6 @@ function updateTokens(obj) {
 		tokens.innerText = '000000'
 	}
 }
-
-// function removeHighlight() {
-
-// 	for (i = 0; i < highlightIds.length; i++) {
-// 		highlightIds[i].style = null;
-// 	}
-// }
 
 function leadingZeros(n, width, z) {
 

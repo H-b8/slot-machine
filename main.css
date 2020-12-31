@@ -1,16 +1,3 @@
-@charset "UTF-8";
-
-@font-face {
-	font-family: 'CloisterBlack-Light';
-	src: url('/fonts/CloisterBlack-Light.eot');
-	src: url('/fonts/CloisterBlack-Light.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/CloisterBlack-Light.woff2') format('woff2'),
-		url('/fonts/CloisterBlack-Light.woff') format('woff'),
-		url('/fonts/CloisterBlack-Light.ttf') format('truetype'),
-		url('/fonts/CloisterBlack-Light.svg#CloisterBlack-Light') format('svg');
-	font-display: optional;
-}
-
 *, *:before, *:after {
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -18,20 +5,13 @@
 body {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 }
 
 /* * * * * * * * * * HEADER * * * * * * * * * */
 
-/* #header {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-} */
-
 #header-image {
-	/* margin-top: 20px; */
+	margin-top: 5vh;
 	pointer-events: none;
 	width: 500px;
 }
@@ -40,19 +20,6 @@ body {
 		width: 70%;
 	}
 }
-
-/* h1 {
-    font-family: 'CloisterBlack-Light', Ariel Black;
-    font-size: 75px;
-    margin: 0;
-    font-weight: normal;
-} */
-
-/* #star {
-    font-family: 'CloisterBlack-Light', Ariel Black;
-    font-size: 90px;
-    line-height: 5px;
-} */
 
 /* * * * * * * * * * GAME DIV * * * * * * * * * */
 
@@ -110,8 +77,7 @@ p {
 	height: 44px;
 }
 
-input,
-input:active {
+input, input:active {
 	color: #dadddd;
 	height: 35px;
 	width: 70%;
@@ -128,9 +94,7 @@ input:focus {
 	color: black;
 }
 
-#placebet,
-#placebet:active,
-#placebet.focus {
+#placebet, #placebet:active, #placebet.focus {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -141,27 +105,14 @@ input:focus {
 	font-size: 15px;
 	font-weight: 600;
 	letter-spacing: 2px;
-
 	outline: none;
 	border: 3px solid black;
-	/* padding: 8px 0px 8px 0px; */
 }
 
 #placebet:hover {
 	background: transparent;
 	color: black;
-	/* border: 3px solid black; */
 }
-
-/* .f-right {
-    float: right;
-    padding: 0px;
-}
-
-.f-left {
-    float: left;
-    padding: 0px;
-} */
 
 /* * * * * * * * * * SPINNER SECTION * * * * * * * * * */
 
@@ -170,7 +121,6 @@ input:focus {
 	margin: 10px 0;
 	width: 100%;
 	padding: 15px;
-	/* height:300px; */
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -212,14 +162,11 @@ h2 {
 }
 @media (max-width: 600px) {
     h2{
-
         font-size: 4vw;
     }
 }
 
-#cashout,
-#cashout:active,
-#cashout.focus {
+#cashout, #cashout:active, #cashout.focus {
 	background: black;
 	color: white;
 	width: 140px;
@@ -248,6 +195,8 @@ footer {
 	margin-top: 10px;
 }
 
+/* * * * * * * * * * ANIMATION * * * * * * * * * */
+
 .marquee {
 	width: 100%;
 	white-space: nowrap;
@@ -266,15 +215,4 @@ footer {
 	100% {
 		transform: translate(-100%, 0);
 	}
-}
-
-#wall {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-#tip {
-	background: yellow;
-	color: blue;
 }
