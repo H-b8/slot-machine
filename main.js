@@ -1,8 +1,7 @@
 /* * * * * * * * * * * * * CONSTANTS * * * * * * * * * * * * */
 
-
 const slotValues = [
-	
+
 	{ name: 'angel', image: 'images/angel.png' },
 	{ name: 'cherries', image: 'images/cherries.png' },
 	{ name: 'devil', image: 'images/devil.png' },
@@ -13,16 +12,12 @@ const slotValues = [
 	{ name: 'trainingkit', image: 'images/trainingkit.png' }
 ];
 
-
 /* * * * * * * * * * APP'S STATE VARIABLES * * * * * * * * * */
-
 
 let tkns;
 let spinResults = [];
 
-
 /* * * * * * * * * CACHED ELEMENT REFERENCES * * * * * * * * */
-
 
 let cashIn = document.querySelector('#cashin');
 let placeBet = document.querySelector('#placebet');
@@ -31,9 +26,7 @@ let spinSound = document.querySelector('#spinsound');
 let winSound = document.querySelector('#winsound');
 let cashOut = document.querySelector('#cashout');
 
-
 /* * * * * * * * * * * EVENT LISTENERS * * * * * * * * * * * */
-
 
 placeBet.addEventListener('click', payMe);
 cashOut.addEventListener('click', initialize);
@@ -48,9 +41,7 @@ spinner.addEventListener('click', function (evt) {
 	}
 });
 
-
 /* * * * * * * * * * * * * FUNCTIONS * * * * * * * * * * * * */
-
 
 initialize();
 
