@@ -198,4 +198,7 @@ footer {
 	#label {
 		display: none;
 	}
+	#notification {
+		padding: 0;
+	}
 }
