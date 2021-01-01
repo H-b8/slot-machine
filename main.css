@@ -57,7 +57,7 @@ h3 {
 	height: 44px;
 }
 
-input [type=text] {
+input {
 	-webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
