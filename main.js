@@ -108,36 +108,83 @@ function updateTokens(obj) {
 			if (key === 'dollar') {
 				tkns += 500;
 				winSound.play();
+				notification.innerHTML = '<h3>SOMEONE TIPPED 500 TOKENS</h3>';
+				notification.style.background = 'yellow';
+				notification.style.color = 'black';
+				removeNotification();
+
 			} else if (key === 'devil') {
 				tkns -= 666;
+				notification.innerHTML = '<h3>SOME TIMEWASTER COST YOU 666 TOKENS</h3>';
+				notification.style.background = 'red';
+				notification.style.color = 'white';
+				removeNotification();
+
 			} else if (key === 'of') {
 				tkns -= Math.floor(tkns * .20);
+				notification.innerHTML = '<h3>ONLYFANS TOOK A 20% CUT OF YOUR EARNINGS</h3>';
+				notification.style.background = '#00aff0';
+				notification.style.color = 'white';
+				removeNotification();
 			} else if (key === 'mv') {
 				tkns -= Math.floor(tkns * .40);
+				notification.innerHTML = '<h3>MANYVIDS TOOK A 40% CUT OF YOUR EARNINGS</h3>';
+				notification.style.background = '#ff4081';
+				notification.style.color = 'white';
+				removeNotification();
 			} else if (key === 'trainingkit') {
-				tkns += 420;
+				tkns += 1000;
+				notification.innerHTML = '<h3>SOMEONE TIPPED 1,000 TOKENS</h3>';
+				notification.style.background = 'yellow';
+				notification.style.color = 'black';
+				removeNotification();
+
 			} else {
 				tkns += 100;
 				winSound.play();
+				notification.innerHTML = '<h3>SOMEONE TIPPED 100 TOKENS</h3>';
+				notification.style.background = 'yellow';
+				notification.style.color = 'black';
+				removeNotification();
 			}
 		}
-		
+
 		if (obj[key] === 2) {
 			if (key === 'devil') {
 				tkns -= 100;
+				notification.innerHTML = '<h3>SOME TIMEWASTER COST YOU 100 TOKENS</h3>';
+				notification.style.background = 'red';
+				notification.style.color = 'white';
+				removeNotification();
 			} else if (key === 'of') {
 				tkns -= Math.floor(tkns * .20);
+				notification.innerHTML = '<h3>ONLYFANS TOOK A 20% CUT OF YOUR EARNINGS</h3>';
+				notification.style.background = '#00aff0';
+				notification.style.color = 'white';
+				removeNotification();
 			} else if (key === 'mv') {
 				tkns -= Math.floor(tkns * .40);
+				notification.innerHTML = '<h3>MANYVIDS TOOK A 40% CUT OF YOUR EARNINGS</h3>';
+				notification.style.background = '#ff4081';
+				notification.style.color = 'white';
+				removeNotification();
 			} else {
 				tkns += 50
 				winSound.play();
+				notification.innerHTML = '<h3>SOMEONE TIPPED 50 TOKENS</h3>';
+				notification.style.background = 'yellow';
+				notification.style.color = 'black';
+				removeNotification();
 			}
 		}
 
 		if (obj[key] === 1 && key === 'dollar') {
 			tkns += 20;
 			winSound.play();
+			notification.innerHTML = '<h3>SOMEONE TIPPED 20 TOKENS</h3>';
+			notification.style.background = 'yellow';
+			notification.style.color = 'black';
+			removeNotification();
 		}
 	}
 
@@ -154,4 +201,13 @@ function leadingZeros(n, width, z) {
 	z = z || '0';
 	n = n + '';
 	return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+
+function removeNotification() {
+
+	setTimeout(function () {
+		notification.innerHTML = null;
+		notification.style.background = null;
+		notification.style.color = null;
+	}, 1500);
 }
