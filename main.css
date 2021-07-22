@@ -29,7 +29,7 @@ body {
 
 /* * * * * * * * * * INSTRUCTIONS * * * * * * * * * */
 
-#instructions {
+#betting-instructions {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -49,7 +49,7 @@ h3 {
 	margin: 0;
 }
 
-.bet-container {
+.bet-input-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;

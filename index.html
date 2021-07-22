@@ -13,9 +13,12 @@
     </head>
 
     <body>
-        <img src="images/headertext.png" id="header-image">
+        <header>
+            <img src="images/headertext.png" id="header-image">
+        </header>
+        
         <div id="game">
-            <div id="instructions">
+            <section id="betting-instructions">
                 <div id="notification"></div>
                 <div class="marquee">
                     <p>
@@ -34,25 +37,26 @@
 
                 <div id="bet">
                     <h3>* * * * * * * $0.05 = 1 TOKEN, 5 TOKENS/SPIN * * * * * * *</h3>
-                    <div class="bet-container">
+                    <div class="bet-input-container">
                         <input id="cashin" value="0.00">
                         <button id="placebet">PLACE BET</button>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div id="spinner">
+            <section id="spinner">
                 <img class="slot-image" id="0" src="">
                 <img class="slot-image" id="1" src="">
                 <img class="slot-image" id="2" src="">
-            </div>
+            </section>
 
-            <div id="money">
+            <section id="money">
                 <h2 id="label" class="score">TOKENS = </h2>
                 <h2 id="tokens" class="score"></h2>
                 <button id="cashout">CA$H OUT</button>
-            </div>
+            </section>
         </div>
+
         <footer>MADE BY BAITES</footer>
     </body>
 </html>
