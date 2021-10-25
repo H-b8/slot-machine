@@ -11,6 +11,11 @@ body {
 
 /* * * * * * * * * * HEADER * * * * * * * * * */
 
+header {
+	display: flex;
+	justify-content: center;
+}
+
 #header-image {
 	margin-top: 5vh;
 	width: 500px;
